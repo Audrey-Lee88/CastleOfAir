@@ -108,10 +108,10 @@
 						<!-- Blog -->
 							<article id="blog">
 								<h2 class="major">Blog</h2>
-								Links to different Sprint sections of in the blog.
-								<a href="#Sprint1">Sprint 1</a>
-								<a href="#Sprint2">Sprint 2</a>
-								<a href="#Sprint3">Sprint 3</a>
+								<p>Links to different Sprint sections in the blog.
+								<a href="#Sprint1">Sprint 1</a><br>
+								<a href="#Sprint2">Sprint 2</a><br>
+								<a href="#Sprint3">Sprint 3</a></p>
 								<h3 class="major" id="Sprint1">Sprint 1</h3>
 								<ul class="alt">
 									<li>10/17/19 <br> Today was the first day of writing our blog of our meetings, as well as our first organized meeting to start planning and fabricating for Sprint 1. We divvied up our tasks between the different subteams on our Trello board, and were able to get an idea of a first-cut prototype. For our Sprint 1 idea, we would use a medium of air and different colors of paper to visualize music. We decided to use POE supplied motors and a sheet of acrylic from the scrap bin for our testing purposes. With this first-cut model, we would be able to gauge what can be achieved for this project and how all sub-teams (electrical, mechanical, and software) will be integrated. The electrical section will sense audio input, mechanical will create the chambers for the fan and paper, and software will analyze the audio input and control the fan. <br> <span class="image fit"><img src="images/10_17_pic1.jpg" alt="" /></span>This is a sketch of our idea for the first-cut prototype.<br>-Audrey Lee </li>
@@ -132,6 +132,7 @@ The mechanical team started today’s meeting working with version 2 of the 3D p
 
 								</ul>
 								<h3 class="major" id="Sprint2">Sprint 2</h3>
+								<a href="#Sprint1">Back To Top</a><br
 								<ul class="alt">
 									<li>10/27/19 <br> Today, in the mechanical direction, we were working on shopping and ideation. We are wary about buying new materials, because of our limited budget, so plenty of research is necessary to determine whether certain motors are appropriate for our designs. In terms of software, today was highly efficient! Progress was made on debugging our Python to Arduino IDE. We also solved the problem of repeat authentication. Then, we went on to automate the identification of song BPM, and furthered our understanding of the structure of the song features (a dictionary, full of lists, some of which contain dictionaries).Today in the electrical team, we accidentally burnt out a few Op-Amps. We also finalized the rest of the circuit for getting the frequencies from our microphone component.<br> <span class="image fit"><img src="images/10_27_pic1.jpg" alt="" /></span><br>-Casey May </li>
 									<li>10/29/19 <br> <strong>Mechanical:</strong><br>We tested with a blower fan instead of the previous fan designs that had trouble pushing air through the triangular opening. When at the highest RPM, the blower fan design pushed a significant amount of air out. Thus, we discovered that the motor was even faster when directly connected to power instead of power and arduino (suggested by Professor Aaron). Aaron also suggested exploring with speakers or compressed air to prevent us from only struggling with fans throughout the entire final project.<br><strong>Electrical:</strong><br>Circuit is at a stance where can receive audio input, amplify the input, extract the peaks of the frequencies, and amplify that again. Is also debugging the program that does all the aforementioned functions.<br><strong>Software:</strong><br>For the data-processing side, we were able to sweep through the information per songs. However, we discovered that the sweeping takes too much time that by the time we get the information at a specific point of a song, it has moved onto a different point of a song. We also learned about a library called “Madmom” that takes about 5 seconds of processing and predicts music features with its neuralnet. For the serial communication, we realized that the Serial.isavailable() may not be responding instantly when a new input is given since it is in a while loop. Therefore, we are going to explore using Serial.interrupt().<br> -HK Rho</li>
@@ -143,6 +144,7 @@ The mechanical team started today’s meeting working with version 2 of the 3D p
 								</ul>
 
 								<h3 class="major" id="Sprint3">Sprint 3</h3>
+								<a href="#Sprint1">Back To Top</a><br
 								<ul class="alt">
 									<li>Dolor pulvinar etiam.</li>
 									<li>Sagittis adipiscing.</li>
@@ -154,7 +156,7 @@ The mechanical team started today’s meeting working with version 2 of the 3D p
 									<li>Sagittis adipiscing.</li>
 									<li>Felis enim feugiat.</li>
 								</ul>
-								<a href="#Sprint1">Back to Top</a>
+								<a href="#Sprint1">Back To Top</a>
 							</article>
 
 						<!-- Budget -->
