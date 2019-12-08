@@ -1,11 +1,14 @@
-@font-face {
-	src: url(assets/webfonts/HARRYP__.TTF) format('truetype'),
-		 url(assets/webfonts/harryp__-webfont.woff2) format('woff2'),
-         url(assets/webfonts/harryp__-webfont.woff) format('woff');
-	font-family: harrypotter;
-}
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
+
+@font-face {
+	font-family: 'harrypotter';
+	src: url('harryFont/harryp.tff') format('truetype'),
+		 url('harryFont/harryp__-webfont.woff2') format('woff2'),
+		 url('harryFont/harryp__-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
 
 /*
 	Dimension by HTML5 UP
@@ -195,6 +198,7 @@ input, select, textarea {
 		}
 
 		h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
+			font-family:harrypotter;
 			border-bottom: solid 1px #ffffff;
 			width: -moz-max-content;
 			width: -webkit-max-content;
@@ -206,7 +210,6 @@ input, select, textarea {
 
 	h1 {
 		font-size: 2.25rem;
-		font-family: harrypotter;
 		line-height: 1.3;
 		letter-spacing: 0.5rem;
 	}
@@ -231,6 +234,12 @@ input, select, textarea {
 
 	h6 {
 		font-size: 0.6rem;
+	}
+
+	.harryp_h1 {
+		font-family:harrypotter;
+		font-size: 3.0rem;
+		font-weight: bold;
 	}
 
 	@media screen and (max-width: 736px) {
