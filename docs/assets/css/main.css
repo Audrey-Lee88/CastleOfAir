@@ -709,8 +709,10 @@ input, select, textarea {
 
 		.image.fit {
 			display: block;
-			margin: 0 0 2rem 0;
-			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			/* margin: 0 0 2rem 0; */
+			width: 80%;
 		}
 
 			.image.fit img {
@@ -1181,7 +1183,7 @@ input, select, textarea {
 			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
 			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
 			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-			background-image: url("../../images/hogwarts_watercolor.png");
+			background-image: url("../../images/hogwarts_watercolor_monn_print.png");
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;

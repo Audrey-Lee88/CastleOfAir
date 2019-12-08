@@ -140,10 +140,79 @@ The mechanical team started today’s meeting working with version 2 of the 3D p
 									<li>10/27/19<br> Today, in the mechanical direction, we were working on shopping and ideation. We are wary about buying new materials, because of our limited budget, so plenty of research is necessary to determine whether certain motors are appropriate for our designs. In terms of software, today was highly efficient! Progress was made on debugging our Python to Arduino IDE. We also solved the problem of repeat authentication. Then, we went on to automate the identification of song BPM, and furthered our understanding of the structure of the song features (a dictionary, full of lists, some of which contain dictionaries).Today in the electrical team, we accidentally burnt out a few Op-Amps. We also finalized the rest of the circuit for getting the frequencies from our microphone component.<br> <span class="image fit"><img src="images/10_27_pic1.png" alt="" /></span><br>-Casey May </li>
 									<li>10/29/19<br> <strong>Mechanical:</strong><br>We tested with a blower fan instead of the previous fan designs that had trouble pushing air through the triangular opening. When at the highest RPM, the blower fan design pushed a significant amount of air out. Thus, we discovered that the motor was even faster when directly connected to power instead of power and arduino (suggested by Professor Aaron). Aaron also suggested exploring with speakers or compressed air to prevent us from only struggling with fans throughout the entire final project.<br><strong>Electrical:</strong><br>Circuit is at a stance where can receive audio input, amplify the input, extract the peaks of the frequencies, and amplify that again. Is also debugging the program that does all the aforementioned functions.<br><strong>Software:</strong><br>For the data-processing side, we were able to sweep through the information per songs. However, we discovered that the sweeping takes too much time that by the time we get the information at a specific point of a song, it has moved onto a different point of a song. We also learned about a library called “Madmom” that takes about 5 seconds of processing and predicts music features with its neuralnet. For the serial communication, we realized that the Serial.isavailable() may not be responding instantly when a new input is given since it is in a while loop. Therefore, we are going to explore using Serial.interrupt().<br> -HK Rho</li>
 									<li>10/31/19<br>During our ~spooky~ meeting today, we discussed logistics for what we want to accomplish in our next few meetings in order to meet the goals we set for Sprint 2. On the mechanical side, SeungU has designed a new blower fan that he plans to 3D print for tomorrow’s meeting. We have received the foam balls and mesh wire we had ordered. We are wondering about using actuators versus fan, which we are planning to test after fabricating a round acrylic tube during tomorrow’s meeting. We are trying to figure out what motor we are going to use, since we need a motor that can handle large amounts of current without melting. We are expecting that the motor will need to be controlled with PWM. The software team has been working on resolving git issues while merging their work. They have succeeded in getting serial communication working to control an LED! For electrical progress, we made a circuit schematic in KiCad (pictured below).<br><span class="image fit"><img src="images/10_31_pic1.jpg" alt="" /></span><br>-Julia Benton</li>
-									<li>11/1/19<br> <strong>Mechanical:</strong><br>We created a better fan structure that can blow more air out compared to the last structure. We also worked on creating a circular cylinder, but we had to pivot and create a hex cylinder instead due to material issues. With the teaching team’s help, we were provided with a power supply that can measure the voltage and current, so now we can measure the current flowing to the motor with the load. <br><strong>Electrical:</strong><br> The sensor is working now, being able to get input from the surrounding sound. We assumed that the sensor was not working, but hopefully, it was not the case. <br><strong>Software:</strong><br> Software: We succeeded in controlling the fan speed using the Adafruit motor shield. Also, we figured out how to solve an issue with Spotify API so we not can get whatever data we want from the song.</li>
-									<li>11/3/19<br></li>
-									<li>11/5/19<br></li>
-									<li>11/8/19<br></li>
+									<li>11/1/19<br> <strong>Mechanical:</strong><br>We created a better fan structure that can blow more air out compared to the last structure. We also worked on creating a circular cylinder, but we had to pivot and create a hex cylinder instead due to material issues. With the teaching team’s help, we were provided with a power supply that can measure the voltage and current, so now we can measure the current flowing to the motor with the load. <br> <span class="image fit"><img src="images/11_1_pic1.png" alt="" /></span><br> <strong>Electrical:</strong><br> The sensor is working now, being able to get input from the surrounding sound. We assumed that the sensor was not working, but hopefully, it was not the case.<br> <span class="image fit"><img src="images/11_1_pic2.png" alt="" /></span><span class="image fit"><img src="images/11_1_pic3.png" alt="" /></span><span class="image fit"><img src="images/11_1_pic4.jpg" alt="" /></span><br><strong>Software:</strong><br> Software: We succeeded in controlling the fan speed using the Adafruit motor shield. Also, we figured out how to solve an issue with Spotify API so we not can get whatever data we want from the song.<br>-SeungU Lyu</li>
+									<li>11/3/19<br> 
+										<strong>Electrical & Software:</strong><br>
+										Today, the Electrical subteam integrated the sound waves captured with the microphone with the Software subteam to move the fan. We also worked on the Fast Fourier Transform code to capture the individual frequencies from the sound waves. We used an Arduino sample code for the Fast Fourier Transform. While we have not done anything yet with the information received from the Arduino, we now know how it will be formatted.
+										<span class="image fit"><img src="images/11_3_pic1.jpg" alt="" /></span><br>
+										<span class="center">Fourier Transform displaying the frequencies and amplitudes respectively.</span><br>
+										<span class="image fit"><img src="images/11_3_pic2.jpg" alt="" /></span>
+										<span class="center">Fourier Transform graph of the sound waves’ individual frequencies.</span><br>
+										The Software and Electrical team strived to get analog values from the microphone via the Arduino to control the fan speed. First, we successfully converted analog values from the Arduino to a Python script. Then depending if the value is above a certain value (500 for example), the Python script will send a value of 1 back to the Arduino Serial to test if the LED light on the light on the Arduino will turn on. The light would turn off if the analog value from the microphone was below the designated value. From this, we were able to control the speed of the fan with this concept.<br>The Electrical subteam also created a circuit for LED lights for the Software team to control. The Software subteam made advancements with visualizing the beat of the music with LED lights. 
+										<span class="image fit"><img src="images/11_3_pic3.jpg" alt="" /></span>
+										<span class="center">The LED circuit for the Software subteam to utilize and control.</span><br>
+										<br><strong>Mechanical:</strong><br>
+										The Mechanical subteam designed and fabricated a hex cylinder pipe to test the structure. We made the base and the structure as well as put in the mesh to make sure that the foam balls do not escape. We also measured the current and discovered that the motor only drew approximately 0.3 Amperes maximum. This means that we can use lower current control, which will help us in the long run. 
+										<span class="image fit"><img src="images/11_3_pic4.jpg" alt="" /></span><br>
+										<span class="center">SeungU is happy that his fan works and he can check the Amps drawn from the motor.</span><br>
+										<span class="image fit"><img src="images/11_3_pic5.jpg" alt="" /></span><br>
+										<span class="center">Amperes drawn from the motor. The leftmost number is the current being drawn by the motor.</span><br>
+										<span class="image fit"><img src="images/11_3_pic6.jpg" alt="" /></span><br>
+										<span class="center">Structure is working with fan blowing the little foam balls around in the chamber!</span><br>-Audrey Lee
+									</li>
+									<li>11/5/19<br> 
+										<strong>Electrical:</strong><br>
+										Today on the electrical team, we debugged the lighting board used to connect to Spotify to verify that the lights were correct, and ended up switching out the breadboard, and started working on sprint 2 presentation layout.
+										<span class="image fit"><img src="images/11_5_pic1.jpg" alt="" /></span><br>
+										<strong>Mechanical:</strong><br>
+										Today we discussed the design of our structure, and decided we might pivot from a hexagonal tube to a square shape, which will be easier to raster stuff onto and be less money. We also started working on fixing the problem with static electricity. We considered pivoting from the Goblet of Fire design to a Hogwarts castle structure to incorporate the visualizer channels in a more aesthetic way.
+										<br><br><strong>Software:</strong><br>
+										Today the software team worked on calibrating the fan speeds with the height of the foam balls. Much of the work involved airflow manipulation. We also worked on serial communication from the Spotify code to the LEDs, but didn’t quite completely manage to make the LEDs respond actively, but in the end was able to turn them on from python.<br>-Casey May
+									</li>
+									<li>11/7/19<br>
+										Today we all worked on the presentation for Sprint 2, and clarified questions amongst ourselves.
+										<br><strong>Mechanical:</strong><br>
+										The mechanical has worked on designing a final structure (not done yet) for the visualizer. We ordered eight RS-555 12V 6100RPM DC motors (we ordered a few extra in case some breaks). The mechanical team has also tried emptying the assembly to get rid of the static friction inside the acrylic.
+										<span class="image fit"><img src="images/11_7_pic1.jpg" alt="" /></span><br>
+										<strong>Electrical:</strong><br>
+										Researched affordable LEDs suit for our visualizer. 
+										<br><br><strong>Software:</strong><br>
+										Tested the fan control before the demo tomorrow. We discovered two major problems: the microphone is not only sensitive to frequencies but also the air flow (e.g. wind we blow with our mouth), and although the fan usually reacts to the changes in the audio input it fails to react sometimes (even though the audio input goes over the bounds, the fans do not show changes). One assumption to this is the delay in transferring information between Arduino and Python. <br>-HK Rho
+									</li>
+									<li>11/8/19<br>
+										Today, the team reported what we accomplished during Sprint 2 to our peers and the teaching team. We got helpful feedback on our current model and recommendations for moving forward from classmates and the teaching team. The team received feedback that we need to be very clear about what we want our demo day experience to look like. We got the recommendation of using a flow chart to clearly communicate whether preloaded Spotify data or live analog input is controlling the different features of our visualizer. The teaching team reminded us that Sprint 4 is extremely short and we must get very close to a final deliverable in Sprint 3. We also realized that we need to start making our team’s website and are considering using Jekyll through GitHub Pages. We started thinking about a cool raster design for the acrylic Hogwarts towers and began looking into ordering acrylic, LEDs, and marble 3D print filament.<br>-Julia Benton
+									</li>
+									<li>11/10/19<br>
+										<strong>Mechanical:</strong><br>
+										Figured out design of the tower (chamfer vs fillet) and discussed about which PLA filament to use. Decided to lower the height of the tower to prevent massive waste of time on fabricating. 
+										<br><strong>Electrical:</strong><br>
+										Worked on circuit design on KiCAD
+										<span class="image fit"><img src="images/11_10_pic1.jpg" alt="" /></span><br>
+										<br><strong>Software:</strong><br>
+										Ordered the mini LEDs to put on the towers. Broke Ubuntu, researched on hashtables, dictionaries, and visualizing FFT.<br>-SeungU Lyu
+									</li>
+									<li>11/12/19<br>
+										<strong>Software:</strong><br>
+										Tried sweeping through dictionaries to access the beats of songs. Used computer output to control lights instead. We have the light respond actively to the song that is currently playing. In this meeting, we tried to figure out more about dictionaries in C and accessing the values in them. After discussing with Amon, we discovered what Serial communication and what the baud rate means. We realized that a higher baud rate means faster communication which may be fast enough to transfer data from the Arduino to Python. 
+										<br><strong>Electrical:</strong><br>
+										Made finishing touches to the sound receiving PCB. Made sure to reduce space used and make sure that copper lines do not cross if they are on the same layer. We also made sure that the copper lines were connected to the correct places, and was able to catch some mistakes before ordering the PCB. 
+										<span class="image fit"><img src="images/11_12_pic1.jpg" alt="" /></span><br>
+										<span class="center">Gerber files viewed in GerbView KiCad.</span><br>
+										<span class="image fit"><img src="images/11_12_pic2.jpg" alt="" /></span><br>
+										<span class="center">PCB preview of the PCB ordered through OSH Park</span><br>
+										<br><strong>Mechanical:</strong><br>
+										Working on design and general structure of our apparatus so it looks nice. Used Blender to create a rock like model for appearances to fit our Harry Potter Hogwarts Castle.
+										<span class="image fit"><img src="images/11_12_pic3.jpg" alt="" /></span><br>
+										<span class="center">Design in progress that will be 3D printed.</span><br>-Audrey Lee
+									</li>
+									<li>11/14/19<br>
+										We collectively worked on looking at different themes for our website to choose the one that is simplistic, aesthetic, and easy to navigate. The mechanical team will 3D print the fans to make sure there if there are any more modifications that needs to be made in the CAD. The software team has continued working on extracting the maximum amplitudes of six frequency ranges to control the motors. <br>-HK Rho
+									</li>
+									<li>11/15/19<br>
+										Today in the software team we made progress in a pivoted direction for how to scrape the majority of our information for the lighting, using PulseAudio. We also made progress on getting the frequencies divided into six channels. There are some formatting issues we’re running into in terms of frequency samples.<br>
+										In the mechanical team we spent a long time trying to get a 3D print that was stuck off the printer. We’re focusing on the aesthetics of the castle  and planning on trying to get some free filament by writing a review on the filament site.<br>
+										In the electrical team there was a bit of a lapse because of waiting on parts, so most of the progress made was on initial website work, because that deadline is coming up fast.<br>-Casey May
+									</li>
 								</ul>
 
 								<h3 class="major" id="Sprint3">Sprint 3</h3>
