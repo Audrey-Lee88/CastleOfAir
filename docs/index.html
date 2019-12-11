@@ -283,7 +283,7 @@
                                         <br> -HK Rho
                                     </li>
 
-                                    <li>12/6/19</li>
+                                    <li>12/6/19<br />
                                     Today’s meeting was our final instructional period before demo day on Wednesday! The POE teaching team checked in with us to discuss our progress and their expectations for the five minute rocket talk we will give to classmates and guests. Our team feels that we are on track to deliver a product that we are proud of in addition to an aesthetic, informational website. In our last class period, the electrical team made progress in developing our website and creating the circuit PCB, shown in the picture below. The PCB is a replacement for the breadboard circuit and is cleaner, smaller, and should work better.
                                     <span class="image fit"><img src="images/12_6_19_pic1.png" alt="" /></span>
                                     <br>
@@ -304,6 +304,21 @@
                                     <br>
                                     Other than that, we worked on the website with general design (Font, Background image) and the content so that we can finish the website by the deadline.
                                     <br>-SeungU Lyu
+                                    </li>
+                                    <li>
+                                        12/10/19<br />
+                                        Today was a very eventful day as it was the day before demo day. Under a lot of pressure to make everything look presentable, we also encountered a lot of problems. The first thing we did was work on the rocket pitch slides for demo day. This was straightforward and were able to get them done. Our next step was to hook up all of the motors to the motor shields and control them with audio input. When hooking up the motors to the motor shields, we noticed that something was amiss. The green light on the top motor shield was flickering, so we unplugged it for a bit, and then plugged it back in. We thought it was alright since the green light stayed constantly on, but then we saw smoke and smelled something burning. We immediately unplugged the power supply and looked at the motor shields. One of the h-bridge chips was completely melted and fried. The smoke from this chip charred a bit of the motor shield on top. While we believe that the top motor shield did not sustain any damage, the bottom one most certainly did.
+                                        <br />
+                                        <span class="image fit"><img src="images/12_10_pic1.jpg" alt="" /></span><br />
+                                        <span class="center">Top motor shield is the one that we believe is still functional. The bottom motor shield sustained damage to the h-bridge chip.</span><br>
+                                        Before we even plugged in our motors, we calculated and tested to make sure that the motors did not draw too much current. They seemed fine when we tested them, but unfortunately we burned out a chip and we learned from this experience. In order to solve this problem, and make sure that we do not burn out any more motor shields, we decided to stack five motor shields on top of each with each one containing a single motor as to ensure that they would not draw too much current. This proved to be effective and we were able to control the motors effectively (although we still try and keep an eye on the motor shields just in case).<br />
+                                        The next problem we encountered was with printing/sending data from the Arduino to Python to see the motor speeds change as a result of the audio input. Before we put in all five motors and only had two, this part of the code worked well. However, when we changed our setup, this code did not work as well, and one of the channels would not work properly. We deleted the line that prints the motor speeds, so we cannot see the motor speeds, but now the channels work.<br />
+                                        Through the hardships, we were able to stick together as a team and persevere. We were able to get a video of our finished product and a team photo to commemorate our progress! <br />
+                                        <span class="image fit"><img src="images/12_10_pic2.jpg" alt="" /></span><br />
+                                        <span class="image fit"><img src="images/12_10_pic3.jpg" alt="" /></span><br />
+                                        -Audrey Lee
+                                    </li>
+
                                 </ul>
 								<a href="#Sprint1">Back To Top</a>
 							</article>
