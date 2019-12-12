@@ -74,34 +74,37 @@
 								<h2 class="major">Team</h2>
 								<p>Team! Put our pictures, names, descriptions, and other various info here! We should put a team picuture at the top!</p>
 
-								<h3 class="major">Audrey Lee</h3>
+								<h3 class="major">Audrey Lee - Electrical Subteam</h3>
 								<span class="image main"><img src="images/hogwarts_watercolor.png" alt="" /></span>
 								<p>Audrey's Intro</p>
 								<ul class="icons">
 									<li><a href="https://github.com/Audrey-Lee88" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
-								<h3 class="major">Casey May</h3>
+								<h3 class="major">Casey May - Software Subteam</h3>
 								<span class="image main"><img src="images/hogwarts_watercolor.png" alt="" /></span>
 								<p>Casey's Intro</p>
 								<ul class="icons">
 									<li><a href="https://github.com/CaseyJMay" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
 
-								<h3 class="major">HK Rho</h3>
+								<h3 class="major">HK Rho - Software Subteam</h3>
 								<span class="image main"><img src="images/profile_pics/hkRho.jpg" alt="" style="width:300px;height:300px;" class="center"/></span>
-								<p>Hello! My name is Hyunkyung Rho (HK for short) and I am currently a sophomore at Olin College of Engineering.</p>
+								<p>
+									HK is a sophomore (Class of 2022) majoring in Engineering with Computing at Olin College of Engineering.
+									She is a fanatic of the Harry Potter series including the Cursed Child and the Fantastic Beast series as well!
+								</p>
 								<ul class="icons">
 									<li><a href="https://github.com/hkRho" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
 
-								<h3 class="major">Julia Benton</h3>
+								<h3 class="major">Julia Benton - Mechanical/Design Subteam</h3>
 								<span class="image main"><img src="images/hogwarts_watercolor.png" alt="" /></span>
 								<p>Julia Benton is a sophomore at Olin College majoring in Engineering with a concentration in design, but who secretly wants to be a mechanical engineer. She is always working to bring joy and wonder into the lives of people all across the world by working for the Walt Disney company. </p>
 								<ul class="icons">
 									<li><a href="https://github.com/juliabenton" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
 
-								<h3 class="major">SeungU Lyu</h3>
+								<h3 class="major">SeungU Lyu - Mechanical Subteam</h3>
 								<span class="image main"><img src="images/hogwarts_watercolor.png" alt="" /></span>
 								<p>SeungU's Intro</p>
 								<ul class="icons">
@@ -475,9 +478,45 @@
 						<!-- Software -->
 							<article id="software">
 								<h2 class="major">Software</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p>Software</p>
-								<h4 class="major">Other Subsystems</h3>
+
+								<a href="#motor">Motor Control</a><br>
+								<a href="#led">LED Control</a><br><br>
+
+								<h3 class="major" id="motor">Motor Control</h3>
+								<p> The software system for controlling the motors beneath each of the five towers was dependent on the analog audio input from a microphone.
+									The output from the microphone was a single frequency that was a combination of all the existing frequencies of a given sound input.
+									To break down the output into different frequencies and their respective amplitudes, fast fourier transform (FFT) was applied to the output.
+									Then we extracted the frequencies with the highest amplitudes and used the amplitudes to control the speed of the motors.
+								</p>
+								<span class="image main"><img src="images/motor_control_flowchart.jpg" alt="" /></span>
+
+								<h3 class="h3.subsection">Serial Communication Between Arduino and Python Script</h4>
+								<p>
+									The software subteam first started by sending and receiving data between the Arduino and the Python script through serial communication.
+									We decided to send data from the Arduino and then process the data in the Python script rather than sending and processing the data all in the Arduino.
+									This decision was made based on the difficulty of data wrangling and processing in C++. 
+								</p>
+
+								<h3 class="h3.subsection">Selection of the Highest Amplitudes</h4>
+								<p>
+									Once the data from each timestamp was delivered to the Python script, we processed the data so that the five highest amplitudes would be selected from 
+									each timestamp, and those amplitudes would be sent back to the Arduino for controlling the motor speeds.
+									The amplitudes were scaled up to show more visible changes in the motor speeds. <br>
+									One of the challenges we had to deal in this process was involved dealing with empty data.
+									When empty data was detected, we moved onto reading the next line of the data to prevent errors. 
+								</p>
+
+								<h3 class="h3.subsection">Controlling the Motors with Multiple Motor Shields</h4>
+								<p>
+									After the Arduino receives the five highest amplitudes, the amplitudes are used to control the motors.
+									We used five different motorshields respective to each motor to prevent possible burning of the motor shields.
+									A big difficulty we faced when visualizing music from the microphone was struggling to synch the height of the foam balls with the audio input.
+									It was very difficult to detect sounds resulting from clapping, singing, whistling, etc. due to the noise in the background, which included the sound of the running motors.
+									As a fix to this, we made a soundproof box and placed the microphone within it along with speakers.
+								</p>
+								
+								<h3 class="major" id="led">LED Control</h3>
+								<h3 class="h3.subsection">Source Code: <a href="https://github.com/CaseyJMay/PoeProjectCode" class="icon brands fa-github" class="center"><span class="label">GitHub</span></a></h4>
 									<section>
 										<p></p>
 										<ul class="actions">
