@@ -446,11 +446,50 @@
 						<!-- Electrical -->
                             <article id="electrical">
                                 <h2 class="major">Electrical</h2>
+                                <i>A summary of the electrical system in Castle of Air</i>
                                 <span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-                                <h4 class="major">Goals</h4>
-                                <p>The primary goal of the Electrical Subsystem was to be able to receive and amplify sound waves and perform Fourier Transform on the signal to affect the fan motor speeds of our aparatus.</p>
-                                <h4 class="major">How it Works</h4>
-                                <p></p>
+
+                                <p>
+                                    We developed and prototyped a system which is capable of visualizing analog sound input. We started with prototyping a sound receiver on a breadboard. We worked towards a functional PCB, that would receive sound input, filter, amplify it. This amplified signal would then be sent to be processed by the <a href="#software">Software</a> and Electrical Subsystems by applying Fourier Transform to extract the frequencies from the signal. With these extracted frequencies, we would be able to control the fan speeds to visualize the frequencies in our channels built by the <a href="#mechanical">Mechanical</a> Subsystem.
+                                    <br />
+                                    <br />
+                                    We also developed the light system that would be utilized to visualize the beat of the song. This relied on the <a href="#software">Software</a> Subsystem’s algorithm to get the rhythm of the song.
+                                </p>
+                                <h4 class="major">Design Process</h4>
+                                <i>
+                                    Walkthrough of how we developed our electrical components.
+                                </i>
+                                <p>
+                                    <br />
+                                    We first started off with a circuit that could just detect sound waves. It worked like it was supposed to, but it was hard to see if there were any discernible sounds caused by the team.
+                                    <br />
+                                    <span class="image fit"><img src="images/10_22_pic1.png" alt="" /></span>
+                                    <br />
+                                    Next, we moved on to amplifying the signal so we could see noticeable differences in pitch changes. We plugged the circuit into a breadboard that contains  the microphone and preamplifier. As an added measure, we also wanted to include a peak detector and a buffer amplifier. The schematic of the circuit can be seen in the schematic section of this page. The picture below is the breadboard circuit of the <a href="#schematic">schematic</a>.
+                                    <br />
+                                    <span class="image fit"><img src="images/11_1_pic4.jpg" alt="" /></span>
+                                    <br />
+                                    After we found that our breadboard circuit worked, we moved on to designing a PCB on KiCad. We converted the KiCad schematic to a KiCad PCB format to get Gerber files, and ordered it from OSHPark:
+                                    <br />
+                                    <span class="image fit"><img src="images/11_12_pic1.png" alt="" /></span>
+                                    <span class="image fit"><img src="images/11_12_pic2.png" alt="" /></span>
+                                    <br />
+                                    When we received our PCB two weeks later, we unfortunately found out that the op-amp we had in stock was too big for the surface-mount pads on our PCB. This was because we accidentally put an LMV324 as our op-amp instead of an OPA4353UA op-amp.
+                                    <br />
+                                    <br />
+                                    Since we could not use our PCB, we decided to make the circuit neater by using a proto board.
+                                    <br />
+                                    <span class="image fit"><img src="images/12_6_19_pic1.png" alt="" /></span>
+                                    <br />
+                                    We decided that we only needed the first half of the circuit since that was all that was needed for processing the signal.
+                                </p>
+                                <h4 class="major" id="schematic">Schematic</h4>
+                                <i>
+                                    A description of the Schematic and PCB Design.
+                                </i>
+                                <p>
+                                    <span class="image fit"><img src="images/KiCadSchematic_POE.PNG" alt="" /></span>
+                                </p>
                                 <h3 class="major">Other Subsystems</h3>
                                 <section>
                                     <ul class="actions">
