@@ -13,681 +13,701 @@
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 </head>
-	<body class="is-preload">
+<body class="is-preload">
+    <iframe src="250-milliseconds-of-silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+    <audio autoplay loop id="player">
+        <source src="Hedwig's Theme_John Williams.mp3.mp3">
+    </audio>
+    <!-- Wrapper -->
+    <div id="wrapper">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+        <!-- Header -->
+        <header id="header">
+            <div class="logo">
+                <i class="fas fa-music"></i>
+            </div>
+            <div class="content">
+                <div class="inner">
+                    <h1 class="harryp_h1">Castle of Air</h1>
+                    <p> Live processing music visualization to enhance your musical experience.</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#intro">Intro</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#systems">System</a></li>
+                    <li><a href="#budget">Budget</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <!-- 								<li><a href="#elements">Elements</a></li> -->
+                    <li><a href="#team">Team</a></li>
+                </ul>
+            </nav>
+        </header>
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<i class="fas fa-music"></i>
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1 class="harryp_h1">Castle of Air</h1>
-								<p> Live processing music visualization to enhance your musical experience.</p>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#intro">Intro</a></li>
-								<li><a href="#process">Process</a></li>
-								<li><a href="#systems">System</a></li>
-								<li><a href="#budget">Budget</a></li>
-								<li><a href="#blog">Blog</a></li>
-<!-- 								<li><a href="#elements">Elements</a></li> -->
-								<li><a href="#team">Team</a></li>
-							</ul>
-						</nav>
-					</header>
+        <!-- Main -->
+        <div id="main">
 
-				<!-- Main -->
-					<div id="main">
+            <!-- Intro -->
+            <article id="intro">
+                <h2 class="major">Intro</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/jhsYh3JRdYw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-						<!-- Intro -->
-                        <article id="intro">
-							<h2 class="major">Intro</h2>
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/jhsYh3JRdYw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p> Music shouldn’t be just about listening. Elevate your music experience with the magic of Castle of Air. </p>
+                <p> We are the creators of Castle of Air. Our name was originally Goblet of Water, but evolved over time as our project shifted through different <a href="#process">phases</a>.</p>
+                <p>Our project began with the desire to make something impressive and aesthetically pleasing. We shifted between various ideas, but finally settled on what eventually became our final product, Goblet of Air. Five towers, five fans, five lights, thousands of foam balls, and infinite entertainment. Our Harry Potter themed acrylic channels utilize real time music visualization to brighten the room and enhance the user’s musical experience.</p>
+                <p> Our minimum viable product, or MVP, was to create an aesthetic music visualizer with at least two frequency channels that adjust the height of small foam balls. We wanted our MVP to have LEDs (lights) flashing according to the tempo and controlled by preloaded data from Spotify. The foam ball height is controlled by live analog audio input. We were able to build up from our MVP to create awesome demo day experience for users. Our final structure had 5 frequency channels incorporated into our clean, beautifully-designed 3D-printed castle structure. </p>
 
-                            <p> Music shouldn’t be just about listening. Elevate your music experience with the magic of Castle of Air. </p>
-                            <p> We are the creators of Castle of Air. Our name was originally Goblet of Water, but evolved over time as our project shifted through different <a href="#process">phases</a>.</p>
-                            <p>Our project began with the desire to make something impressive and aesthetically pleasing. We shifted between various ideas, but finally settled on what eventually became our final product, Goblet of Air. Five towers, five fans, five lights, thousands of foam balls, and infinite entertainment. Our Harry Potter themed acrylic channels utilize real time music visualization to brighten the room and enhance the user’s musical experience.</p>
-							<p> Our minimum viable product, or MVP, was to create an aesthetic music visualizer with at least two frequency channels that adjust the height of small foam balls. We wanted our MVP to have LEDs (lights) flashing according to the tempo and controlled by preloaded data from Spotify. The foam ball height is controlled by live analog audio input. We were able to build up from our MVP to create awesome demo day experience for users. Our final structure had 5 frequency channels incorporated into our clean, beautifully-designed 3D-printed castle structure. </p>
-							
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/Ym_K3z4aSjw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Ym_K3z4aSjw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-                            <h3 class="major">Data Flow</h3>
-                            <p>The flow diagram below shows the flow of information based off of the user's interaction with our apparatus.</p>
-                            <span class="image fit"><img src="images/flowdiagram.jpg" alt="" /></span>
-                        </article>
+                <h3 class="major">Data Flow</h3>
+                <p>The flow diagram below shows the flow of information based off of the user's interaction with our apparatus.</p>
+                <span class="image fit"><img src="images/flowdiagram.jpg" alt="" /></span>
+            </article>
 
-						<!-- Process -->
-                        <article id="process">
-                            <h2 class="major">Process</h2>
-                            <h3 class="major">Sprint 1</h3>
-                            <p>
-                                In Sprint one, our team decided that we wanted to visualize music on a physical medium. We had not at this point decided what that medium should be, but we knew it would be either water or air & foam balls. We decided that our MVP would be at least two visualizer channels with non real time visualization, but we knew we wanted to be aesthetically pleasing.
-                            </p>
-                            <span class="image main"><img src="images/10_17_pic1.jpg" alt="" class="center" /></span>
-                            <h3 class="major">Sprint 2</h3>
-                            <p>
-                                In Sprint two, we decided that we wanted to use foam balls as our visualization material.
-                                We came up with a vision of our demo day product, as well as a new MVP. We wanted our demo day product to at least allow users to choose songs from a set playlist, and then the song would be played from a speaker positioned near the microphone, which would activate the frequency channels. Our MVP now required the height of the foam balls to be controlled by analog audio input.
-                            </p>
-                            <span class="image main"><img src="images/11_3_pic6.jpg" alt="" class="center" /></span>
-                            <h3 class="major">Sprint 3</h3>
-                            <p>
-                                In Sprint three, we finally pivoted from goblet of air to castle of air, because of our decision to make the 3D printed parts form a castle shape. Our MVP still included two visualizer channels, and still only required preloaded data. It still called for an aesthetically pleasing factor.
-                            </p>
-                            <span class="image main"><img src="images/12_5_19_pic1.jpg" alt="" class="center" /></span>
-                            <h3 class="major">Sprint 4</h3>
-                            <p>
-                                Our final design surpassed our MVP requirements by operating on data that didn’t have to be preloaded and controlling six full channels of frequency based foam ball manipulation. Our vision of demo day was able to be implemented and was successfully carried out on demo day.
-                            </p>
-                            <span class="image main"><img src="images/12_6_19_pic2.png" alt="" class="center" /></span>
-                        </article>
+            <!-- Process -->
+            <article id="process">
+                <h2 class="major">Process</h2>
+                <h3 class="major">Sprint 1</h3>
+                <p>
+                    In Sprint one, our team decided that we wanted to visualize music on a physical medium. We had not at this point decided what that medium should be, but we knew it would be either water or air & foam balls. We decided that our MVP would be at least two visualizer channels with non real time visualization, but we knew we wanted to be aesthetically pleasing.
+                </p>
+                <span class="image main"><img src="images/10_17_pic1.jpg" alt="" class="center" /></span>
+                <h3 class="major">Sprint 2</h3>
+                <p>
+                    In Sprint two, we decided that we wanted to use foam balls as our visualization material.
+                    We came up with a vision of our demo day product, as well as a new MVP. We wanted our demo day product to at least allow users to choose songs from a set playlist, and then the song would be played from a speaker positioned near the microphone, which would activate the frequency channels. Our MVP now required the height of the foam balls to be controlled by analog audio input.
+                </p>
+                <span class="image main"><img src="images/11_3_pic6.jpg" alt="" class="center" /></span>
+                <h3 class="major">Sprint 3</h3>
+                <p>
+                    In Sprint three, we finally pivoted from goblet of air to castle of air, because of our decision to make the 3D printed parts form a castle shape. Our MVP still included two visualizer channels, and still only required preloaded data. It still called for an aesthetically pleasing factor.
+                </p>
+                <span class="image main"><img src="images/12_5_19_pic1.jpg" alt="" class="center" /></span>
+                <h3 class="major">Sprint 4</h3>
+                <p>
+                    Our final design surpassed our MVP requirements by operating on data that didn’t have to be preloaded and controlling six full channels of frequency based foam ball manipulation. Our vision of demo day was able to be implemented and was successfully carried out on demo day.
+                </p>
+                <span class="image main"><img src="images/12_6_19_pic2.png" alt="" class="center" /></span>
+            </article>
 
-						<!-- Team -->
-							<article id="team">
-								<h2 class="major">Team</h2>
-								<p></p>
-								
-								<span class="image fit"><img src="images/12_10_pic3.jpg" alt="" /></span><br />
+            <!-- Team -->
+            <article id="team">
+                <h2 class="major">Team</h2>
+                <p></p>
 
-								<h3 class="major">Audrey Lee - Electrical Subteam</h3>
-								<span class="image main"><img src="images/profile_pics/AudreyLee.jpg" alt="" class="center"/></span>
-								<p>Audrey is a sophomore at Olin College of Engineering majoring in Electrical and Computer Engineering. She is fascinated by electricity, but not when it shocks her.</p>
-								<ul class="icons">
-									<li><a href="https://github.com/Audrey-Lee88" class="icon brands fa-github"><span class="label"></span></a></li>
-								</ul>
-								<h3 class="major">Casey May - Software Subteam</h3>
-								<span class="image main"><img src="images/profile_pics/CaseyMay.jpg" alt="" /></span>
-                                <p>Casey is a sophomore at Franklin W. Olin College of Engineering majoring in Engineering with a focus in Computing. He is especially interested in working with scraping and utilizing scraped data in software. He plans to move as far north as possible and live in the mountains with his three Australian Shepherds soon after graduation.</p>
-								<ul class="icons">
-									<li><a href="https://github.com/CaseyJMay" class="icon brands fa-github"><span class="label"></span></a></li>
-								</ul>
+                <span class="image fit"><img src="images/12_10_pic3.jpg" alt="" /></span><br />
 
-								<h3 class="major">HK Rho - Software Subteam</h3>
-								<span class="image main"><img src="images/profile_pics/hkRho.jpg" alt="" style="width:400px;height:400px;" class="center"/></span>
-								<p>
-									HK is a sophomore (Class of 2022) majoring in Engineering with Computing at Olin College of Engineering.
-									She is a fanatic of the Harry Potter series and still is secretly waiting for her Hogwarts letter.
-								</p>
-								<ul class="icons">
-									<li><a href="https://github.com/hkRho" class="icon brands fa-github"><span class="label"></span></a></li>
-								</ul>
+                <h3 class="major">Audrey Lee - Electrical Subteam</h3>
+                <span class="image main"><img src="images/profile_pics/AudreyLee.jpg" alt="" class="center" /></span>
+                <p>Audrey is a sophomore at Olin College of Engineering majoring in Electrical and Computer Engineering. She is fascinated by electricity, but not when it shocks her.</p>
+                <ul class="icons">
+                    <li><a href="https://github.com/Audrey-Lee88" class="icon brands fa-github"><span class="label"></span></a></li>
+                </ul>
+                <h3 class="major">Casey May - Software Subteam</h3>
+                <span class="image main"><img src="images/profile_pics/CaseyMay.jpg" alt="" /></span>
+                <p>Casey is a sophomore at Franklin W. Olin College of Engineering majoring in Engineering with a focus in Computing. He is especially interested in working with scraping and utilizing scraped data in software. He plans to move as far north as possible and live in the mountains with his three Australian Shepherds soon after graduation.</p>
+                <ul class="icons">
+                    <li><a href="https://github.com/CaseyJMay" class="icon brands fa-github"><span class="label"></span></a></li>
+                </ul>
 
-								<h3 class="major">Julia Benton - Mechanical/Design Subteam</h3>
-								<span class="image main"><img src="images/profile_pics/Julia_POE_pic.jpg" alt="" style="width:400px;height:400px;" class="center"/></span>
-								<p>Julia Benton is part of the Olin College class of 2022 and majoring in Engineering with a concentration in Design. She previously thought her calling was mechanical engineering and possesses some CAD and fabrication skills that she was able to utilize in this project. Her lifelong dream is to bring joy and wonder into the lives of people all across the world by working for the Walt Disney Company. She found a similar magic in this POE team!</p>
-								<ul class="icons">
-									<li><a href="https://github.com/juliabenton" class="icon brands fa-github"><span class="label"></span></a></li>
-								</ul>
+                <h3 class="major">HK Rho - Software Subteam</h3>
+                <span class="image main"><img src="images/profile_pics/hkRho.jpg" alt="" style="width:400px;height:400px;" class="center" /></span>
+                <p>
+                    HK is a sophomore (Class of 2022) majoring in Engineering with Computing at Olin College of Engineering.
+                    She is a fanatic of the Harry Potter series and still is secretly waiting for her Hogwarts letter.
+                </p>
+                <ul class="icons">
+                    <li><a href="https://github.com/hkRho" class="icon brands fa-github"><span class="label"></span></a></li>
+                </ul>
 
-								<h3 class="major">SeungU Lyu - Mechanical Subteam</h3>
-								<span class="image main"><img src="images/profile_pics/seungu.png" alt="" /></span>
-								<p>SeungU's Intro</p>
-								<ul class="icons">
-									<li><a href="https://github.com/SeunguLyu" class="icon brands fa-github"><span class="label"></span></a></li>
-								</ul>
-							</article>
+                <h3 class="major">Julia Benton - Mechanical/Design Subteam</h3>
+                <span class="image main"><img src="images/profile_pics/Julia_POE_pic.jpg" alt="" style="width:400px;height:400px;" class="center" /></span>
+                <p>Julia Benton is part of the Olin College class of 2022 and majoring in Engineering with a concentration in Design. She previously thought her calling was mechanical engineering and possesses some CAD and fabrication skills that she was able to utilize in this project. Her lifelong dream is to bring joy and wonder into the lives of people all across the world by working for the Walt Disney Company. She found a similar magic in this POE team!</p>
+                <ul class="icons">
+                    <li><a href="https://github.com/juliabenton" class="icon brands fa-github"><span class="label"></span></a></li>
+                </ul>
 
-						<!-- Blog -->
-							<article id="blog">
-								<h2 class="major">Blog</h2>
-								<p>Links to different Sprint sections in the blog.<br>
-								<a href="#Sprint1">Sprint 1</a><br>
-								<a href="#Sprint2">Sprint 2</a><br>
-								<a href="#Sprint3">Sprint 3</a><br>
-								<a href="#Sprint4">Sprint 4</a><br></p>
-								<h3 class="major" id="Sprint1">Sprint 1</h3>
-								<ul class="alt">
-									<li><b>10/17/2019</b><br> Today was the first day of writing our blog of our meetings, as well as our first organized meeting to start planning and fabricating for Sprint 1. We divvied up our tasks between the different subteams on our Trello board, and were able to get an idea of a first-cut prototype. For our Sprint 1 idea, we would use a medium of air and different colors of paper to visualize music. We decided to use POE supplied motors and a sheet of acrylic from the scrap bin for our testing purposes. With this first-cut model, we would be able to gauge what can be achieved for this project and how all sub-teams (electrical, mechanical, and software) will be integrated. The electrical section will sense audio input, mechanical will create the chambers for the fan and paper, and software will analyze the audio input and control the fan. <br> <span class="image fit"><img src="images/10_17_pic1.jpg" alt="" /></span><span class="center">This is a sketch of our idea for the first-cut prototype.</span><br>-Audrey Lee </li>
+                <h3 class="major">SeungU Lyu - Mechanical Subteam</h3>
+                <span class="image main"><img src="images/profile_pics/seungu.png" alt="" /></span>
+                <p>SeungU's Intro</p>
+                <ul class="icons">
+                    <li><a href="https://github.com/SeunguLyu" class="icon brands fa-github"><span class="label"></span></a></li>
+                </ul>
+            </article>
 
-									<li><b>10/18/2019</b><br> Today we hopped into initial research and design. We discussed scalability and feasibility with two NINJAs, and solidified our thought process on where the project was heading. During our check in with the teaching team, we talked about the difficulty of using water, but ended on an optimistic note. Our team just has to be careful not to get to engrossed in water control. The mechanical team launched into CAD and fabrication, the electrical team pushed into circuit diagrams for audio sensing, and the software team started work on interpreting the Spotify API and brainstormed how to interpret the external audio input. <br> <span class="image fit"><img src="images/10_18_pic1.jpg" alt="" /></span>
-											<span class="image fit"><img src="images/10_18_pic2.jpg" alt="" /></span> <br>-Casey May
-									</li>
+            <!-- Blog -->
+            <article id="blog">
+                <h2 class="major">Blog</h2>
+                <p>
+                    Links to different Sprint sections in the blog.<br>
+                    <a href="#Sprint1">Sprint 1</a><br>
+                    <a href="#Sprint2">Sprint 2</a><br>
+                    <a href="#Sprint3">Sprint 3</a><br>
+                    <a href="#Sprint4">Sprint 4</a><br>
+                </p>
+                <h3 class="major" id="Sprint1">Sprint 1</h3>
+                <ul class="alt">
+                    <li><b>10/17/2019</b><br> Today was the first day of writing our blog of our meetings, as well as our first organized meeting to start planning and fabricating for Sprint 1. We divvied up our tasks between the different subteams on our Trello board, and were able to get an idea of a first-cut prototype. For our Sprint 1 idea, we would use a medium of air and different colors of paper to visualize music. We decided to use POE supplied motors and a sheet of acrylic from the scrap bin for our testing purposes. With this first-cut model, we would be able to gauge what can be achieved for this project and how all sub-teams (electrical, mechanical, and software) will be integrated. The electrical section will sense audio input, mechanical will create the chambers for the fan and paper, and software will analyze the audio input and control the fan. <br> <span class="image fit"><img src="images/10_17_pic1.jpg" alt="" /></span><span class="center">This is a sketch of our idea for the first-cut prototype.</span><br>-Audrey Lee </li>
 
-									<li><b>10/20/2019</b><br> Today we made progress in all the mechanical, electrical, and software for Sprint 1. All the mechanical components except the fan were assembled and put together. We struggled quite a bit with the fan, for it was not pushing the air upwards, but rather downwards and also sidewise. To mitigate this issue, we worked on changing the angle of the fan and started a reprint on the 3D printers. For the electrical side, we soldered together basic wiring composed of resistors and capacitors for the microphone sensor. The next step to this would be soldering the microphone sensor to what was done today. For the software side, we worked on learning how to use the “spotipy” library and played around retrieving data from songs, user’s playlists, etc. This was mostly research for the future sprints; therefore, the software goal for Sprint 1 is to control the speed of the fan (e.g. with tempo) and work with the electrical components. <br> <span class="image fit"><img src="images/10_20_pic1.jpg" alt="" /></span><br>
-									<span class="image fit"><img src="images/10_20_pic2.jpg" alt="" /></span>
-                                    <span class="center">Pictures of the assembly of the components.</span><span class="image fit"><img src="images/10_20_pic3.jpg" alt="" /></span><br>-HK Rho </li>
+                    <li>
+                        <b>10/18/2019</b><br> Today we hopped into initial research and design. We discussed scalability and feasibility with two NINJAs, and solidified our thought process on where the project was heading. During our check in with the teaching team, we talked about the difficulty of using water, but ended on an optimistic note. Our team just has to be careful not to get to engrossed in water control. The mechanical team launched into CAD and fabrication, the electrical team pushed into circuit diagrams for audio sensing, and the software team started work on interpreting the Spotify API and brainstormed how to interpret the external audio input. <br> <span class="image fit"><img src="images/10_18_pic1.jpg" alt="" /></span>
+                        <span class="image fit"><img src="images/10_18_pic2.jpg" alt="" /></span> <br>-Casey May
+                    </li>
 
-                                    <li>
-                                        <b>10/22/2019</b><br> During today’s meeting, the team continued working hard to make mechanical, software, and electrical progress with the knowledge that our first sprint review is coming up soon on Friday. The things we need to accomplish in our next meeting and before our report-out is integrating the mechanical, software, and electrical parts and creating a presentation that communicates our work and future plans clearly. We received advice about Friday’s report from the POE instructors that we will be sure to utilize to planning for our presentation. The software team is currently tackling the issue of getting multiple access tokens for the song playing and the features of the song playing. Currently, separate requests must be made to access the song’s data, but the team is trying to figure out how to not have to pull up another website to make each request. The software team also began trying to communicate between Arduino and Python. <br>
-                                        <br />For the electrical component, we got microphone audio input, but the voltage difference isn’t high enough so we are doing lots of circuit building on our breadboard to amplify the signal.
-                                        The mechanical team started today’s meeting working with version 2 of the 3D printed structure, which involved a bigger, more powerful fan. After attaching the motor, however, the air was still not blowing upwards like we wanted, which we realized after consulting the teaching team was due to the fact that there is a solid 3D printed structure below the fan that does not allow for air to be gathered. We considered drilling holes through the 3D printed base, but then decided designing and reprinting our structure to allow more air flow would be more efficient and effective. We remodeled and began printing version 3 of the structure. <br> <span class="image fit"><img src="images/10_22_pic1.png" alt="" /></span>
-                                        <span class="center">Audrey’s circuit building progress!</span><br>-Julia Benton
-                                    </li>
+                    <li>
+                        <b>10/20/2019</b><br> Today we made progress in all the mechanical, electrical, and software for Sprint 1. All the mechanical components except the fan were assembled and put together. We struggled quite a bit with the fan, for it was not pushing the air upwards, but rather downwards and also sidewise. To mitigate this issue, we worked on changing the angle of the fan and started a reprint on the 3D printers. For the electrical side, we soldered together basic wiring composed of resistors and capacitors for the microphone sensor. The next step to this would be soldering the microphone sensor to what was done today. For the software side, we worked on learning how to use the “spotipy” library and played around retrieving data from songs, user’s playlists, etc. This was mostly research for the future sprints; therefore, the software goal for Sprint 1 is to control the speed of the fan (e.g. with tempo) and work with the electrical components. <br> <span class="image fit"><img src="images/10_20_pic1.jpg" alt="" /></span><br>
+                        <span class="image fit"><img src="images/10_20_pic2.jpg" alt="" /></span>
+                        <span class="center">Pictures of the assembly of the components.</span><span class="image fit"><img src="images/10_20_pic3.jpg" alt="" /></span><br>-HK Rho
+                    </li>
 
-									<li><b>10/24/2019</b> <br> During today’s meeting, we focused on finishing the sprint 1 presentation slides and discussed which medium we will be using for the final product. We decided to use air as our medium since it can be done with better designs compared to water. By using air, we can use the money on more DC motors which means we can have more frequency channels. By choosing air, we realized that we have to discuss the team what can we put more into the electrical part since a lot of LED circuiting is temporarily removed from our todo list. <br> 
-                                    <br />We received advice from the teaching team on how to make the mechanical component working, and from the feedback, we saw the possibility of our old mechanical structure functioning with little modification. We are trying to reprint some parts to test out whether they will work or not. <br> <span class="image fit"><img src="images/10_24_pic1.gif" alt="" /></span><br> -SeungU Lyu</li>
+                    <li>
+                        <b>10/22/2019</b><br> During today’s meeting, the team continued working hard to make mechanical, software, and electrical progress with the knowledge that our first sprint review is coming up soon on Friday. The things we need to accomplish in our next meeting and before our report-out is integrating the mechanical, software, and electrical parts and creating a presentation that communicates our work and future plans clearly. We received advice about Friday’s report from the POE instructors that we will be sure to utilize to planning for our presentation. The software team is currently tackling the issue of getting multiple access tokens for the song playing and the features of the song playing. Currently, separate requests must be made to access the song’s data, but the team is trying to figure out how to not have to pull up another website to make each request. The software team also began trying to communicate between Arduino and Python. <br>
+                        <br />For the electrical component, we got microphone audio input, but the voltage difference isn’t high enough so we are doing lots of circuit building on our breadboard to amplify the signal.
+                        The mechanical team started today’s meeting working with version 2 of the 3D printed structure, which involved a bigger, more powerful fan. After attaching the motor, however, the air was still not blowing upwards like we wanted, which we realized after consulting the teaching team was due to the fact that there is a solid 3D printed structure below the fan that does not allow for air to be gathered. We considered drilling holes through the 3D printed base, but then decided designing and reprinting our structure to allow more air flow would be more efficient and effective. We remodeled and began printing version 3 of the structure. <br> <span class="image fit"><img src="images/10_22_pic1.png" alt="" /></span>
+                        <span class="center">Audrey’s circuit building progress!</span><br>-Julia Benton
+                    </li>
 
-									<li><b>10/25/2019</b> <br> Today, we presented what we accomplished in Sprint 1 to our peers and the teaching team. We were able to get very helpful feedback and new approaches to concepts from our peers and the teaching team. For the electrical and software sub-teams, realized that our initial plan of having two “modes” between the electrical and software parts were not really integration. We re-evaluated our ideas, and decided to keep our idea for the Fourier Transformed audio inputs for the frequencies of the songs while combining it with lights for the bass and beat of the songs. This combines both electrical and software beautifully while also making sure that we do not overscope for this project. The mechanical sub-team decided on a “leaf-blower” type fan design instead of a “computer fan” one. This newer design would help concentrate the air flow for us and make sure that the air goes directly into our frequency/visualizer channels. <br> -Audrey Lee</li>
+                    <li>
+                        <b>10/24/2019</b> <br> During today’s meeting, we focused on finishing the sprint 1 presentation slides and discussed which medium we will be using for the final product. We decided to use air as our medium since it can be done with better designs compared to water. By using air, we can use the money on more DC motors which means we can have more frequency channels. By choosing air, we realized that we have to discuss the team what can we put more into the electrical part since a lot of LED circuiting is temporarily removed from our todo list. <br>
+                        <br />We received advice from the teaching team on how to make the mechanical component working, and from the feedback, we saw the possibility of our old mechanical structure functioning with little modification. We are trying to reprint some parts to test out whether they will work or not. <br> <span class="image fit"><img src="images/10_24_pic1.gif" alt="" /></span><br> -SeungU Lyu
+                    </li>
 
-								</ul>
-								<h3 class="major" id="Sprint2">Sprint 2</h3>
-								<a href="#Sprint1">Sprint 1</a><br>
-								<a href="#Sprint3">Sprint 3</a><br>
-								<a href="#Sprint4">Sprint 4</a><br><br>
-								<ul class="alt">
-									<li><b>10/27/2019</b><br> Today, in the mechanical direction, we were working on shopping and ideation. We are wary about buying new materials, because of our limited budget, so plenty of research is necessary to determine whether certain motors are appropriate for our designs. In terms of software, today was highly efficient! Progress was made on debugging our Python to Arduino IDE. We also solved the problem of repeat authentication. Then, we went on to automate the identification of song BPM, and furthered our understanding of the structure of the song features (a dictionary, full of lists, some of which contain dictionaries). Today in the electrical team, we accidentally burnt out a few Op-Amps. We also finalized the rest of the circuit for getting the frequencies from our microphone component.<br> <span class="image fit"><img src="images/10_27_pic1.png" alt="" /></span><br>-Casey May </li>
-									<li><b>10/29/2019</b><br> <strong>Mechanical:</strong>
-                                    <br>We tested with a blower fan instead of the previous fan designs that had trouble pushing air through the triangular opening. When at the highest RPM, the blower fan design pushed a significant amount of air out. Thus, we discovered that the motor was even faster when directly connected to power instead of power and arduino (suggested by Professor Aaron). Aaron also suggested exploring with speakers or compressed air to prevent us from only struggling with fans throughout the entire final project.
-                                    <br /><br><strong>Electrical:</strong><br>Circuit is at a stance where can receive audio input, amplify the input, extract the peaks of the frequencies, and amplify that again. Is also debugging the program that does all the aforementioned functions.<br>
-                                    <br /><strong>Software:</strong><br>For the data-processing side, we were able to sweep through the information per songs. However, we discovered that the sweeping takes too much time that by the time we get the information at a specific point of a song, it has moved onto a different point of a song. We also learned about a library called “Madmom” that takes about 5 seconds of processing and predicts music features with its neuralnet. For the serial communication, we realized that the Serial.isavailable() may not be responding instantly when a new input is given since it is in a while loop. Therefore, we are going to explore using Serial.interrupt().<br> -HK Rho</li>
-									<li><b>10/31/2019</b><br>During our ~spooky~ meeting today, we discussed logistics for what we want to accomplish in our next few meetings in order to meet the goals we set for Sprint 2. On the mechanical side, SeungU has designed a new blower fan that he plans to 3D print for tomorrow’s meeting. We have received the foam balls and mesh wire we had ordered. We are wondering about using actuators versus fan, which we are planning to test after fabricating a round acrylic tube during tomorrow’s meeting. We are trying to figure out what motor we are going to use, since we need a motor that can handle large amounts of current without melting. We are expecting that the motor will need to be controlled with PWM. The software team has been working on resolving git issues while merging their work. They have succeeded in getting serial communication working to control an LED! For electrical progress, we made a circuit schematic in KiCad (pictured below).<br><span class="image fit"><img src="images/10_31_pic1.jpg" alt="" /></span><br>-Julia Benton</li>
-									<li><b>11/1/2019</b><br> <strong>Mechanical:</strong><br>We created a better fan structure that can blow more air out compared to the last structure. We also worked on creating a circular cylinder, but we had to pivot and create a hex cylinder instead due to material issues. With the teaching team’s help, we were provided with a power supply that can measure the voltage and current, so now we can measure the current flowing to the motor with the load. <br> <span class="image fit"><img src="images/11_1_pic1.png" alt="" /></span><br> <strong>Electrical:</strong><br> The sensor is working now, being able to get input from the surrounding sound. We assumed that the sensor was not working, but hopefully, it was not the case.<br> <span class="image fit"><img src="images/11_1_pic2.png" alt="" /></span><span class="image fit"><img src="images/11_1_pic3.png" alt="" /></span><span class="image fit"><img src="images/11_1_pic4.jpg" alt="" /></span><br><strong>Software:</strong><br> Software: We succeeded in controlling the fan speed using the Adafruit motor shield. Also, we figured out how to solve an issue with Spotify API so we not can get whatever data we want from the song.<br>-SeungU Lyu</li>
-									<li><b>11/3/2019</b><br> 
-										<strong>Electrical & Software:</strong><br>
-										Today, the Electrical subteam integrated the sound waves captured with the microphone with the Software subteam to move the fan. We also worked on the Fast Fourier Transform code to capture the individual frequencies from the sound waves. We used an Arduino sample code for the Fast Fourier Transform. While we have not done anything yet with the information received from the Arduino, we now know how it will be formatted.
-										<span class="image fit"><img src="images/11_3_pic1.jpg" alt="" /></span><br>
-										<span class="center">Fourier Transform displaying the frequencies and amplitudes respectively.</span><br>
-										<span class="image fit"><img src="images/11_3_pic2.jpg" alt="" /></span>
-										<span class="center">Fourier Transform graph of the sound waves’ individual frequencies.</span><br>
-										The Software and Electrical team strived to get analog values from the microphone via the Arduino to control the fan speed. First, we successfully converted analog values from the Arduino to a Python script. Then depending if the value is above a certain value (500 for example), the Python script will send a value of 1 back to the Arduino Serial to test if the LED light on the light on the Arduino will turn on. The light would turn off if the analog value from the microphone was below the designated value. From this, we were able to control the speed of the fan with this concept.<br>The Electrical subteam also created a circuit for LED lights for the Software team to control. The Software subteam made advancements with visualizing the beat of the music with LED lights. 
-										<span class="image fit"><img src="images/11_3_pic3.jpg" alt="" /></span>
-										<span class="center">The LED circuit for the Software subteam to utilize and control.</span><br>
-										<br><strong>Mechanical:</strong><br>
-										The Mechanical subteam designed and fabricated a hex cylinder pipe to test the structure. We made the base and the structure as well as put in the mesh to make sure that the foam balls do not escape. We also measured the current and discovered that the motor only drew approximately 0.3 Amperes maximum. This means that we can use lower current control, which will help us in the long run. 
-										<span class="image fit"><img src="images/11_3_pic4.jpg" alt="" /></span><br>
-										<span class="center">SeungU is happy that his fan works and he can check the Amps drawn from the motor.</span><br>
-										<span class="image fit"><img src="images/11_3_pic5.jpg" alt="" /></span><br>
-										<span class="center">Amperes drawn from the motor. The leftmost number is the current being drawn by the motor.</span><br>
-										<span class="image fit"><img src="images/11_3_pic6.jpg" alt="" /></span><br>
-										<span class="center">Structure is working with fan blowing the little foam balls around in the chamber!</span><br>-Audrey Lee
-									</li>
-									<li><b>11/5/2019</b><br> 
-										<strong>Electrical:</strong><br>
-										Today on the electrical team, we debugged the lighting board used to connect to Spotify to verify that the lights were correct, and ended up switching out the breadboard, and started working on sprint 2 presentation layout.
-										<span class="image fit"><img src="images/11_5_pic1.png" alt="" /></span><br>
-										<strong>Mechanical:</strong><br>
-										Today we discussed the design of our structure, and decided we might pivot from a hexagonal tube to a square shape, which will be easier to raster stuff onto and be less money. We also started working on fixing the problem with static electricity. We considered pivoting from the Goblet of Fire design to a Hogwarts castle structure to incorporate the visualizer channels in a more aesthetic way.
-										<br><br><strong>Software:</strong><br>
-										Today the software team worked on calibrating the fan speeds with the height of the foam balls. Much of the work involved airflow manipulation. We also worked on serial communication from the Spotify code to the LEDs, but didn’t quite completely manage to make the LEDs respond actively, but in the end was able to turn them on from python.<br>-Casey May
-									</li>
-									<li><b>11/7/2019</b><br>
-										Today we all worked on the presentation for Sprint 2, and clarified questions amongst ourselves.<br />
-										<br><strong>Mechanical:</strong><br>
-										The mechanical has worked on designing a final structure (not done yet) for the visualizer. We ordered eight RS-555 12V 6100RPM DC motors (we ordered a few extra in case some breaks). The mechanical team has also tried emptying the assembly to get rid of the static friction inside the acrylic.
-										<span class="image fit"><img src="images/11_7_pic1.png" alt="" /></span><br>
-										<strong>Electrical:</strong><br>
-										Researched affordable LEDs suit for our visualizer. 
-										<br><br><strong>Software:</strong><br>
-										Tested the fan control before the demo tomorrow. We discovered two major problems: the microphone is not only sensitive to frequencies but also the air flow (e.g. wind we blow with our mouth), and although the fan usually reacts to the changes in the audio input it fails to react sometimes (even though the audio input goes over the bounds, the fans do not show changes). One assumption to this is the delay in transferring information between Arduino and Python. <br>-HK Rho
-									</li>
-									<li><b>11/8/2019</b><br>
-										Today, the team reported what we accomplished during Sprint 2 to our peers and the teaching team. We got helpful feedback on our current model and recommendations for moving forward from classmates and the teaching team. The team received feedback that we need to be very clear about what we want our demo day experience to look like. We got the recommendation of using a flow chart to clearly communicate whether preloaded Spotify data or live analog input is controlling the different features of our visualizer. The teaching team reminded us that Sprint 4 is extremely short and we must get very close to a final deliverable in Sprint 3. We also realized that we need to start making our team’s website and are considering using Jekyll through GitHub Pages. We started thinking about a cool raster design for the acrylic Hogwarts towers and began looking into ordering acrylic, LEDs, and marble 3D print filament.<br>-Julia Benton
-									</li>
-									
-								</ul>
+                    <li><b>10/25/2019</b> <br> Today, we presented what we accomplished in Sprint 1 to our peers and the teaching team. We were able to get very helpful feedback and new approaches to concepts from our peers and the teaching team. For the electrical and software sub-teams, realized that our initial plan of having two “modes” between the electrical and software parts were not really integration. We re-evaluated our ideas, and decided to keep our idea for the Fourier Transformed audio inputs for the frequencies of the songs while combining it with lights for the bass and beat of the songs. This combines both electrical and software beautifully while also making sure that we do not overscope for this project. The mechanical sub-team decided on a “leaf-blower” type fan design instead of a “computer fan” one. This newer design would help concentrate the air flow for us and make sure that the air goes directly into our frequency/visualizer channels. <br> -Audrey Lee</li>
 
-								<h3 class="major" id="Sprint3">Sprint 3</h3>
-								<a href="#Sprint1">Sprint 1</a><br>
-								<a href="#Sprint2">Sprint 2</a><br>
-								<a href="#Sprint4">Sprint 4</a><br><br>
-                                <ul class="alt">
-                                    <li>
-                                        <b>11/10/2019</b><br>
-                                        <strong>Mechanical:</strong><br>
-                                        Figured out design of the tower (chamfer vs fillet) and discussed about which PLA filament to use. Decided to lower the height of the tower to prevent massive waste of time on fabricating.
-                                        <br /><br><strong>Electrical:</strong><br>
-                                        Worked on circuit design on KiCAD
-                                        <span class="image fit"><img src="images/11_10_pic1.png" alt="" /></span>
-                                        <br><strong>Software:</strong><br>
-                                        Ordered the mini LEDs to put on the towers. Broke Ubuntu, researched on hashtables, dictionaries, and visualizing FFT.<br>-SeungU Lyu
-                                    </li>
-                                    <li>
-                                        <b>11/12/2019</b><br>
-                                        <strong>Software:</strong><br>
-                                        Tried sweeping through dictionaries to access the beats of songs. Used computer output to control lights instead. We have the light respond actively to the song that is currently playing. In this meeting, we tried to figure out more about dictionaries in C and accessing the values in them. After discussing with Amon, we discovered what Serial communication and what the baud rate means. We realized that a higher baud rate means faster communication which may be fast enough to transfer data from the Arduino to Python.
-                                        <br /><br><strong>Electrical:</strong><br>
-                                        Made finishing touches to the sound receiving PCB. Made sure to reduce space used and make sure that copper lines do not cross if they are on the same layer. We also made sure that the copper lines were connected to the correct places, and was able to catch some mistakes before ordering the PCB.
-                                        <span class="image fit"><img src="images/11_12_pic1.png" alt="" /></span>
-                                        <span class="center">Gerber files viewed in GerbView KiCad.</span><br>
-                                        <span class="image fit"><img src="images/11_12_pic2.png" alt="" /></span>
-                                        <span class="center">PCB preview of the PCB ordered through OSH Park.</span>
-                                        <br><strong>Mechanical:</strong><br>
-                                        Working on design and general structure of our apparatus so it looks nice. Used Blender to create a rock like model for appearances to fit our Harry Potter Hogwarts Castle.
-                                        <span class="image fit"><img src="images/11_12_pic3.png" alt="" /></span><br>
-                                        <span class="center">Design in progress that will be 3D printed.</span><br>-Audrey Lee
-                                    </li>
-                                    <li>
-                                        <b>11/14/2019</b><br>
-                                        We collectively worked on looking at different themes for our website to choose the one that is simplistic, aesthetic, and easy to navigate. The mechanical team will 3D print the fans to make sure there if there are any more modifications that needs to be made in the CAD. The software team has continued working on extracting the maximum amplitudes of six frequency ranges to control the motors. <br>-HK Rho
-                                    </li>
-                                    <li>
-                                        <b>11/15/2019</b><br>
-                                        Today in the software team we made progress in a pivoted direction for how to scrape the majority of our information for the lighting, using PulseAudio. We also made progress on getting the frequencies divided into six channels. There are some formatting issues we’re running into in terms of frequency samples.<br>
-                                        In the mechanical team we spent a long time trying to get a 3D print that was stuck off the printer. We’re focusing on the aesthetics of the castle  and planning on trying to get some free filament by writing a review on the filament site.<br>
-                                        In the electrical team there was a bit of a lapse because of waiting on parts, so most of the progress made was on initial website work, because that deadline is coming up fast.<br>-Casey May
-                                    </li>
-                                    <li>
-                                        <b>11/17/2019</b><br>
-                                        During today’s meeting, the team continued working hard to achieve our MVP with the knowledge that our Sprint 3 review is in just five days. The software team tackled two challenges, one of which is that when sending data from Arduino to Python, a null value appears while decoding the data that introduces us to an index error. This results in breaking out of the loops and making the program think there is a problem. Many members of the team worked together in trying to solve this problem. The other area that the software team made progress in is moving information from Spotify through serial delay into a new database to preprocess information for lighting without delay during visualization.<br>
-                                        <br />
-                                        The mechanical team continued doing lots of CAD and moved forward in the manufacturing process by 3D printing with the marble colored filament that we purchased. We are planning to cut and raster the acrylic towers during Tuesday’s meeting. We redesigned the blower fan and are troubleshooting mechanical problems as they arise, one of which is the sheer amount of time that our numerous 3D prints are going to take.<br>
-                                        <br />
-                                        There is still not much electrical work to be done at this point, so the focus has shifted to website design. We decided on a Jekyll theme and to use html rather than JavaScript.<br>-Julia Benton
-                                    </li>
-                                    <li>
-                                        <b>11/21/2019 & 11/22/2019</b><br>
-                                        On the 21st, we decided to schedule an extra meeting to ensure that we would be able to integrate our parts correctly. The electrical subteam was able to put in the lights into the tower that the mechanical subteam manufactured, and the software team was able to control the lights and the fan speed. We discovered that the lights can be programmed to do a variety of colors and patterns. However, depending on the brightness, lower wavelengths of light may not show up. We discovered that unless the NeoPixels were at full brightness, the color red would not show up. After this discovery and putting everything together, we turned off all the lights and admired our creation.
-                                        <span class="image fit"><img src="images/11_21_22_pic1.jpg" alt="" /></span>
-                                        <span class="center">Testing the five NeoPixels needed for our towers.</span><br>
-                                        <span class="image fit"><img src="images/11_21_22_pic2.jpg" alt="" /></span>
-                                        <span class="center">The whole team is admiring our work.</span><br>
-                                        On the 22nd, we still worked on perfecting the NeoPixel blinking tempo and fan speed for the Software subteam as well as finishing up the second tower for the Mechanical subteam. The Electrical subteam helped both subteams with the lights, fan, and tower assembly. We now have two towers with lights and the fan speed can be controlled.
-                                        <span class="image fit"><img src="images/11_21_22_pic3.jpg" alt="" /></span> -Audrey Lee
+                </ul>
+                <h3 class="major" id="Sprint2">Sprint 2</h3>
+                <a href="#Sprint1">Sprint 1</a><br>
+                <a href="#Sprint3">Sprint 3</a><br>
+                <a href="#Sprint4">Sprint 4</a><br><br>
+                <ul class="alt">
+                    <li><b>10/27/2019</b><br> Today, in the mechanical direction, we were working on shopping and ideation. We are wary about buying new materials, because of our limited budget, so plenty of research is necessary to determine whether certain motors are appropriate for our designs. In terms of software, today was highly efficient! Progress was made on debugging our Python to Arduino IDE. We also solved the problem of repeat authentication. Then, we went on to automate the identification of song BPM, and furthered our understanding of the structure of the song features (a dictionary, full of lists, some of which contain dictionaries). Today in the electrical team, we accidentally burnt out a few Op-Amps. We also finalized the rest of the circuit for getting the frequencies from our microphone component.<br> <span class="image fit"><img src="images/10_27_pic1.png" alt="" /></span><br>-Casey May </li>
+                    <li>
+                        <b>10/29/2019</b><br> <strong>Mechanical:</strong>
+                        <br>We tested with a blower fan instead of the previous fan designs that had trouble pushing air through the triangular opening. When at the highest RPM, the blower fan design pushed a significant amount of air out. Thus, we discovered that the motor was even faster when directly connected to power instead of power and arduino (suggested by Professor Aaron). Aaron also suggested exploring with speakers or compressed air to prevent us from only struggling with fans throughout the entire final project.
+                        <br /><br><strong>Electrical:</strong><br>Circuit is at a stance where can receive audio input, amplify the input, extract the peaks of the frequencies, and amplify that again. Is also debugging the program that does all the aforementioned functions.<br>
+                        <br /><strong>Software:</strong><br>For the data-processing side, we were able to sweep through the information per songs. However, we discovered that the sweeping takes too much time that by the time we get the information at a specific point of a song, it has moved onto a different point of a song. We also learned about a library called “Madmom” that takes about 5 seconds of processing and predicts music features with its neuralnet. For the serial communication, we realized that the Serial.isavailable() may not be responding instantly when a new input is given since it is in a while loop. Therefore, we are going to explore using Serial.interrupt().<br> -HK Rho
+                    </li>
+                    <li><b>10/31/2019</b><br>During our ~spooky~ meeting today, we discussed logistics for what we want to accomplish in our next few meetings in order to meet the goals we set for Sprint 2. On the mechanical side, SeungU has designed a new blower fan that he plans to 3D print for tomorrow’s meeting. We have received the foam balls and mesh wire we had ordered. We are wondering about using actuators versus fan, which we are planning to test after fabricating a round acrylic tube during tomorrow’s meeting. We are trying to figure out what motor we are going to use, since we need a motor that can handle large amounts of current without melting. We are expecting that the motor will need to be controlled with PWM. The software team has been working on resolving git issues while merging their work. They have succeeded in getting serial communication working to control an LED! For electrical progress, we made a circuit schematic in KiCad (pictured below).<br><span class="image fit"><img src="images/10_31_pic1.jpg" alt="" /></span><br>-Julia Benton</li>
+                    <li><b>11/1/2019</b><br> <strong>Mechanical:</strong><br>We created a better fan structure that can blow more air out compared to the last structure. We also worked on creating a circular cylinder, but we had to pivot and create a hex cylinder instead due to material issues. With the teaching team’s help, we were provided with a power supply that can measure the voltage and current, so now we can measure the current flowing to the motor with the load. <br> <span class="image fit"><img src="images/11_1_pic1.png" alt="" /></span><br> <strong>Electrical:</strong><br> The sensor is working now, being able to get input from the surrounding sound. We assumed that the sensor was not working, but hopefully, it was not the case.<br> <span class="image fit"><img src="images/11_1_pic2.png" alt="" /></span><span class="image fit"><img src="images/11_1_pic3.png" alt="" /></span><span class="image fit"><img src="images/11_1_pic4.jpg" alt="" /></span><br><strong>Software:</strong><br> Software: We succeeded in controlling the fan speed using the Adafruit motor shield. Also, we figured out how to solve an issue with Spotify API so we not can get whatever data we want from the song.<br>-SeungU Lyu</li>
+                    <li>
+                        <b>11/3/2019</b><br>
+                        <strong>Electrical & Software:</strong><br>
+                        Today, the Electrical subteam integrated the sound waves captured with the microphone with the Software subteam to move the fan. We also worked on the Fast Fourier Transform code to capture the individual frequencies from the sound waves. We used an Arduino sample code for the Fast Fourier Transform. While we have not done anything yet with the information received from the Arduino, we now know how it will be formatted.
+                        <span class="image fit"><img src="images/11_3_pic1.jpg" alt="" /></span><br>
+                        <span class="center">Fourier Transform displaying the frequencies and amplitudes respectively.</span><br>
+                        <span class="image fit"><img src="images/11_3_pic2.jpg" alt="" /></span>
+                        <span class="center">Fourier Transform graph of the sound waves’ individual frequencies.</span><br>
+                        The Software and Electrical team strived to get analog values from the microphone via the Arduino to control the fan speed. First, we successfully converted analog values from the Arduino to a Python script. Then depending if the value is above a certain value (500 for example), the Python script will send a value of 1 back to the Arduino Serial to test if the LED light on the light on the Arduino will turn on. The light would turn off if the analog value from the microphone was below the designated value. From this, we were able to control the speed of the fan with this concept.<br>The Electrical subteam also created a circuit for LED lights for the Software team to control. The Software subteam made advancements with visualizing the beat of the music with LED lights.
+                        <span class="image fit"><img src="images/11_3_pic3.jpg" alt="" /></span>
+                        <span class="center">The LED circuit for the Software subteam to utilize and control.</span><br>
+                        <br><strong>Mechanical:</strong><br>
+                        The Mechanical subteam designed and fabricated a hex cylinder pipe to test the structure. We made the base and the structure as well as put in the mesh to make sure that the foam balls do not escape. We also measured the current and discovered that the motor only drew approximately 0.3 Amperes maximum. This means that we can use lower current control, which will help us in the long run.
+                        <span class="image fit"><img src="images/11_3_pic4.jpg" alt="" /></span><br>
+                        <span class="center">SeungU is happy that his fan works and he can check the Amps drawn from the motor.</span><br>
+                        <span class="image fit"><img src="images/11_3_pic5.jpg" alt="" /></span><br>
+                        <span class="center">Amperes drawn from the motor. The leftmost number is the current being drawn by the motor.</span><br>
+                        <span class="image fit"><img src="images/11_3_pic6.jpg" alt="" /></span><br>
+                        <span class="center">Structure is working with fan blowing the little foam balls around in the chamber!</span><br>-Audrey Lee
+                    </li>
+                    <li>
+                        <b>11/5/2019</b><br>
+                        <strong>Electrical:</strong><br>
+                        Today on the electrical team, we debugged the lighting board used to connect to Spotify to verify that the lights were correct, and ended up switching out the breadboard, and started working on sprint 2 presentation layout.
+                        <span class="image fit"><img src="images/11_5_pic1.png" alt="" /></span><br>
+                        <strong>Mechanical:</strong><br>
+                        Today we discussed the design of our structure, and decided we might pivot from a hexagonal tube to a square shape, which will be easier to raster stuff onto and be less money. We also started working on fixing the problem with static electricity. We considered pivoting from the Goblet of Fire design to a Hogwarts castle structure to incorporate the visualizer channels in a more aesthetic way.
+                        <br><br><strong>Software:</strong><br>
+                        Today the software team worked on calibrating the fan speeds with the height of the foam balls. Much of the work involved airflow manipulation. We also worked on serial communication from the Spotify code to the LEDs, but didn’t quite completely manage to make the LEDs respond actively, but in the end was able to turn them on from python.<br>-Casey May
+                    </li>
+                    <li>
+                        <b>11/7/2019</b><br>
+                        Today we all worked on the presentation for Sprint 2, and clarified questions amongst ourselves.<br />
+                        <br><strong>Mechanical:</strong><br>
+                        The mechanical has worked on designing a final structure (not done yet) for the visualizer. We ordered eight RS-555 12V 6100RPM DC motors (we ordered a few extra in case some breaks). The mechanical team has also tried emptying the assembly to get rid of the static friction inside the acrylic.
+                        <span class="image fit"><img src="images/11_7_pic1.png" alt="" /></span><br>
+                        <strong>Electrical:</strong><br>
+                        Researched affordable LEDs suit for our visualizer.
+                        <br><br><strong>Software:</strong><br>
+                        Tested the fan control before the demo tomorrow. We discovered two major problems: the microphone is not only sensitive to frequencies but also the air flow (e.g. wind we blow with our mouth), and although the fan usually reacts to the changes in the audio input it fails to react sometimes (even though the audio input goes over the bounds, the fans do not show changes). One assumption to this is the delay in transferring information between Arduino and Python. <br>-HK Rho
+                    </li>
+                    <li>
+                        <b>11/8/2019</b><br>
+                        Today, the team reported what we accomplished during Sprint 2 to our peers and the teaching team. We got helpful feedback on our current model and recommendations for moving forward from classmates and the teaching team. The team received feedback that we need to be very clear about what we want our demo day experience to look like. We got the recommendation of using a flow chart to clearly communicate whether preloaded Spotify data or live analog input is controlling the different features of our visualizer. The teaching team reminded us that Sprint 4 is extremely short and we must get very close to a final deliverable in Sprint 3. We also realized that we need to start making our team’s website and are considering using Jekyll through GitHub Pages. We started thinking about a cool raster design for the acrylic Hogwarts towers and began looking into ordering acrylic, LEDs, and marble 3D print filament.<br>-Julia Benton
+                    </li>
 
-                                    </li>
-                                    
-                                </ul>
-								<h3 class="major" id="Sprint4">Sprint 4</h3>
-								<a href="#Sprint1">Sprint 1</a><br>
-								<a href="#Sprint2">Sprint 2</a><br>
-								<a href="#Sprint3">Sprint 3</a><br><br>
-                                <ul class="alt">
-                                    <li>
-                                        <b>12/3/2019</b><br>
-                                        Today in the mechanical team, it was down to the nitty gritty assembly of our final product. With deadlines approaching, the mechanical team has 3 more towers to assemble and some foreground structures to put together. We’re slightly short on materials so we’ll have to do some scavenging.<br>
-                                        <br />
-                                        In the electrical team, today was focused on getting the electrical parts of the final three lights together. We also started working on the website!<br>
-                                        <br />
-                                        In the software team, today was time to work on ironing out the foam ball visualization levels and website work! We still have some stuff to figure out with the foam balls, because there’s a lot of noise.<br>-Casey May
+                </ul>
 
-                                    </li>
-                                    <li>
-                                        <b>12/5/2019</b><br>
-                                        <strong>Mechanical:</strong> <br>
-                                        The mechanical team continued to work on assembling the 3D printed parts and also finished laser cutting the necessary components (the acrylic for the fifth tower and hardboard for the base of the entire assembly).
-                                        <span class="image fit"><img src="images/12_5_19_pic1.jpg" alt="" /></span><br>
-                                        <span class="image fit"><img src="images/12_5_19_pic2.jpg" alt="" /></span><br>
-                                        <span class="image fit"><img src="images/12_5_19_pic3.jpg" alt="" /></span><br>
+                <h3 class="major" id="Sprint3">Sprint 3</h3>
+                <a href="#Sprint1">Sprint 1</a><br>
+                <a href="#Sprint2">Sprint 2</a><br>
+                <a href="#Sprint4">Sprint 4</a><br><br>
+                <ul class="alt">
+                    <li>
+                        <b>11/10/2019</b><br>
+                        <strong>Mechanical:</strong><br>
+                        Figured out design of the tower (chamfer vs fillet) and discussed about which PLA filament to use. Decided to lower the height of the tower to prevent massive waste of time on fabricating.
+                        <br /><br><strong>Electrical:</strong><br>
+                        Worked on circuit design on KiCAD
+                        <span class="image fit"><img src="images/11_10_pic1.png" alt="" /></span>
+                        <br><strong>Software:</strong><br>
+                        Ordered the mini LEDs to put on the towers. Broke Ubuntu, researched on hashtables, dictionaries, and visualizing FFT.<br>-SeungU Lyu
+                    </li>
+                    <li>
+                        <b>11/12/2019</b><br>
+                        <strong>Software:</strong><br>
+                        Tried sweeping through dictionaries to access the beats of songs. Used computer output to control lights instead. We have the light respond actively to the song that is currently playing. In this meeting, we tried to figure out more about dictionaries in C and accessing the values in them. After discussing with Amon, we discovered what Serial communication and what the baud rate means. We realized that a higher baud rate means faster communication which may be fast enough to transfer data from the Arduino to Python.
+                        <br /><br><strong>Electrical:</strong><br>
+                        Made finishing touches to the sound receiving PCB. Made sure to reduce space used and make sure that copper lines do not cross if they are on the same layer. We also made sure that the copper lines were connected to the correct places, and was able to catch some mistakes before ordering the PCB.
+                        <span class="image fit"><img src="images/11_12_pic1.png" alt="" /></span>
+                        <span class="center">Gerber files viewed in GerbView KiCad.</span><br>
+                        <span class="image fit"><img src="images/11_12_pic2.png" alt="" /></span>
+                        <span class="center">PCB preview of the PCB ordered through OSH Park.</span>
+                        <br><strong>Mechanical:</strong><br>
+                        Working on design and general structure of our apparatus so it looks nice. Used Blender to create a rock like model for appearances to fit our Harry Potter Hogwarts Castle.
+                        <span class="image fit"><img src="images/11_12_pic3.png" alt="" /></span><br>
+                        <span class="center">Design in progress that will be 3D printed.</span><br>-Audrey Lee
+                    </li>
+                    <li>
+                        <b>11/14/2019</b><br>
+                        We collectively worked on looking at different themes for our website to choose the one that is simplistic, aesthetic, and easy to navigate. The mechanical team will 3D print the fans to make sure there if there are any more modifications that needs to be made in the CAD. The software team has continued working on extracting the maximum amplitudes of six frequency ranges to control the motors. <br>-HK Rho
+                    </li>
+                    <li>
+                        <b>11/15/2019</b><br>
+                        Today in the software team we made progress in a pivoted direction for how to scrape the majority of our information for the lighting, using PulseAudio. We also made progress on getting the frequencies divided into six channels. There are some formatting issues we’re running into in terms of frequency samples.<br>
+                        In the mechanical team we spent a long time trying to get a 3D print that was stuck off the printer. We’re focusing on the aesthetics of the castle  and planning on trying to get some free filament by writing a review on the filament site.<br>
+                        In the electrical team there was a bit of a lapse because of waiting on parts, so most of the progress made was on initial website work, because that deadline is coming up fast.<br>-Casey May
+                    </li>
+                    <li>
+                        <b>11/17/2019</b><br>
+                        During today’s meeting, the team continued working hard to achieve our MVP with the knowledge that our Sprint 3 review is in just five days. The software team tackled two challenges, one of which is that when sending data from Arduino to Python, a null value appears while decoding the data that introduces us to an index error. This results in breaking out of the loops and making the program think there is a problem. Many members of the team worked together in trying to solve this problem. The other area that the software team made progress in is moving information from Spotify through serial delay into a new database to preprocess information for lighting without delay during visualization.<br>
+                        <br />
+                        The mechanical team continued doing lots of CAD and moved forward in the manufacturing process by 3D printing with the marble colored filament that we purchased. We are planning to cut and raster the acrylic towers during Tuesday’s meeting. We redesigned the blower fan and are troubleshooting mechanical problems as they arise, one of which is the sheer amount of time that our numerous 3D prints are going to take.<br>
+                        <br />
+                        There is still not much electrical work to be done at this point, so the focus has shifted to website design. We decided on a Jekyll theme and to use html rather than JavaScript.<br>-Julia Benton
+                    </li>
+                    <li>
+                        <b>11/21/2019 & 11/22/2019</b><br>
+                        On the 21st, we decided to schedule an extra meeting to ensure that we would be able to integrate our parts correctly. The electrical subteam was able to put in the lights into the tower that the mechanical subteam manufactured, and the software team was able to control the lights and the fan speed. We discovered that the lights can be programmed to do a variety of colors and patterns. However, depending on the brightness, lower wavelengths of light may not show up. We discovered that unless the NeoPixels were at full brightness, the color red would not show up. After this discovery and putting everything together, we turned off all the lights and admired our creation.
+                        <span class="image fit"><img src="images/11_21_22_pic1.jpg" alt="" /></span>
+                        <span class="center">Testing the five NeoPixels needed for our towers.</span><br>
+                        <span class="image fit"><img src="images/11_21_22_pic2.jpg" alt="" /></span>
+                        <span class="center">The whole team is admiring our work.</span><br>
+                        On the 22nd, we still worked on perfecting the NeoPixel blinking tempo and fan speed for the Software subteam as well as finishing up the second tower for the Mechanical subteam. The Electrical subteam helped both subteams with the lights, fan, and tower assembly. We now have two towers with lights and the fan speed can be controlled.
+                        <span class="image fit"><img src="images/11_21_22_pic3.jpg" alt="" /></span> -Audrey Lee
 
-                                        <strong>Electrical:</strong> <br>
-                                        The electrical team worked on a lot of the website and also took part in controlling the LEDs to behave in our desired way.<br />
-                                        <br />
-                                        <strong>Software:</strong> <br>
-                                        The software team continued working on controlling the LEDs and the third tower along with the first two towers. While attempting to improve/understand what the motors are doing, have confirmed that the microphone picks up the sound of the motors.
-                                        <br> -HK Rho
-                                    </li>
+                    </li>
 
-                                    <li><b>12/6/2019</b><br />
-                                    Today’s meeting was our final instructional period before demo day on Wednesday! The POE teaching team checked in with us to discuss our progress and their expectations for the five minute rocket talk we will give to classmates and guests. Our team feels that we are on track to deliver a product that we are proud of in addition to an aesthetic, informational website. In our last class period, the electrical team made progress in developing our website and creating the circuit PCB, shown in the picture below. The PCB is a replacement for the breadboard circuit and is cleaner, smaller, and should work better.
-                                    <span class="image fit"><img src="images/12_6_19_pic1.png" alt="" /></span>
-                                    <br>
-                                    The mechanical subteam cleaned the support off our 3D prints and acquired several screws from the Weissman Foundry, the open-door design studio that can be used by Babson, Olin, and Wellesley students and is a short walk from our Olin classroom. They were able to assemble the remaining two towers and are still 3D printing a few more castle pieces.
-                                    <span class="image fit"><img src="images/12_6_19_pic2.png" alt="" /></span>
-                                    <br>
-                                    <span class="image fit"><img src="images/12_6_19_pic3.png" alt="" /></span>
-                                    <br>
-                                    The software team worked on editing the light code to work for all five lights. They also researched AUX output control, debugged the code that controls the channels, and ordered soundproofing foam eggcrate tiles so we can better test our microphone.
-                                    <br> -Julia Benton
-                                    <li><b>12/8/2019</b></li>
-                                    Software team focused on controlling the LED, since a new issue popped up with using the spotify API. We worked on fixing it, and we were able to figure out the reason why and manage to fix the problem.
+                </ul>
+                <h3 class="major" id="Sprint4">Sprint 4</h3>
+                <a href="#Sprint1">Sprint 1</a><br>
+                <a href="#Sprint2">Sprint 2</a><br>
+                <a href="#Sprint3">Sprint 3</a><br><br>
+                <ul class="alt">
+                    <li>
+                        <b>12/3/2019</b><br>
+                        Today in the mechanical team, it was down to the nitty gritty assembly of our final product. With deadlines approaching, the mechanical team has 3 more towers to assemble and some foreground structures to put together. We’re slightly short on materials so we’ll have to do some scavenging.<br>
+                        <br />
+                        In the electrical team, today was focused on getting the electrical parts of the final three lights together. We also started working on the website!<br>
+                        <br />
+                        In the software team, today was time to work on ironing out the foam ball visualization levels and website work! We still have some stuff to figure out with the foam balls, because there’s a lot of noise.<br>-Casey May
 
-                                    Also, we decided to use extra motor shield for the motors, so we worked on attaching extra motor shield to the arduino so that the motors do not use too much current for single motor shield (2A limit) and because there is only room for four motors per shield.
+                    </li>
+                    <li>
+                        <b>12/5/2019</b><br>
+                        <strong>Mechanical:</strong> <br>
+                        The mechanical team continued to work on assembling the 3D printed parts and also finished laser cutting the necessary components (the acrylic for the fifth tower and hardboard for the base of the entire assembly).
+                        <span class="image fit"><img src="images/12_5_19_pic1.jpg" alt="" /></span><br>
+                        <span class="image fit"><img src="images/12_5_19_pic2.jpg" alt="" /></span><br>
+                        <span class="image fit"><img src="images/12_5_19_pic3.jpg" alt="" /></span><br>
 
-                                    For Mechanical team, we focused on creating remaining parts of the structure (roof for the building) so that the mechanical part is 100% done.
-                                    <span class="image fit"><img src="images/12_8_19_pic1.png" alt="" /></span>
-                                    <br>
-                                    Other than that, we worked on the website with general design (Font, Background image) and the content so that we can finish the website by the deadline.
-                                    <br>-SeungU Lyu
-                                    </li>
-                                    <li>
-                                        <b>12/10/2019</b><br />
-                                        Today was a very eventful day as it was the day before demo day. Under a lot of pressure to make everything look presentable, we also encountered a lot of problems. The first thing we did was work on the rocket pitch slides for demo day. This was straightforward and were able to get them done. Our next step was to hook up all of the motors to the motor shields and control them with audio input. When hooking up the motors to the motor shields, we noticed that something was amiss. The green light on the top motor shield was flickering, so we unplugged it for a bit, and then plugged it back in. We thought it was alright since the green light stayed constantly on, but then we saw smoke and smelled something burning. We immediately unplugged the power supply and looked at the motor shields. One of the h-bridge chips was completely melted and fried. The smoke from this chip charred a bit of the motor shield on top. While we believe that the top motor shield did not sustain any damage, the bottom one most certainly did.
-                                        <br />
-                                        <span class="image fit"><img src="images/12_10_pic1.jpg" alt="" /></span>
-                                        <span class="center">Top motor shield is the one that we believe is still functional. The bottom motor shield sustained damage to the h-bridge chip.</span><br>
-                                        Before we even plugged in our motors, we calculated and tested to make sure that the motors did not draw too much current. They seemed fine when we tested them, but unfortunately we burned out a chip and we learned from this experience. In order to solve this problem, and make sure that we do not burn out any more motor shields, we decided to stack five motor shields on top of each with each one containing a single motor as to ensure that they would not draw too much current. This proved to be effective and we were able to control the motors effectively (although we still try and keep an eye on the motor shields just in case).<br />
-                                        The next problem we encountered was with printing/sending data from the Arduino to Python to see the motor speeds change as a result of the audio input. Before we put in all five motors and only had two, this part of the code worked well. However, when we changed our setup, this code did not work as well, and one of the channels would not work properly. We deleted the line that prints the motor speeds, so we cannot see the motor speeds, but now the channels work.<br />
-                                        Through the hardships, we were able to stick together as a team and persevere. We were able to get a video of our finished product and a team photo to commemorate our progress! <br />
-                                        <span class="image fit"><img src="images/12_10_pic2.jpg" alt="" /></span><br />
-                                        -Audrey Lee
-                                    </li>
+                        <strong>Electrical:</strong> <br>
+                        The electrical team worked on a lot of the website and also took part in controlling the LEDs to behave in our desired way.<br />
+                        <br />
+                        <strong>Software:</strong> <br>
+                        The software team continued working on controlling the LEDs and the third tower along with the first two towers. While attempting to improve/understand what the motors are doing, have confirmed that the microphone picks up the sound of the motors.
+                        <br> -HK Rho
+                    </li>
 
-                                </ul>
-								<a href="#Sprint1">Back To Top</a>
-							</article>
+                    <li>
+                        <b>12/6/2019</b><br />
+                        Today’s meeting was our final instructional period before demo day on Wednesday! The POE teaching team checked in with us to discuss our progress and their expectations for the five minute rocket talk we will give to classmates and guests. Our team feels that we are on track to deliver a product that we are proud of in addition to an aesthetic, informational website. In our last class period, the electrical team made progress in developing our website and creating the circuit PCB, shown in the picture below. The PCB is a replacement for the breadboard circuit and is cleaner, smaller, and should work better.
+                        <span class="image fit"><img src="images/12_6_19_pic1.png" alt="" /></span>
+                        <br>
+                        The mechanical subteam cleaned the support off our 3D prints and acquired several screws from the Weissman Foundry, the open-door design studio that can be used by Babson, Olin, and Wellesley students and is a short walk from our Olin classroom. They were able to assemble the remaining two towers and are still 3D printing a few more castle pieces.
+                        <span class="image fit"><img src="images/12_6_19_pic2.png" alt="" /></span>
+                        <br>
+                        <span class="image fit"><img src="images/12_6_19_pic3.png" alt="" /></span>
+                        <br>
+                        The software team worked on editing the light code to work for all five lights. They also researched AUX output control, debugged the code that controls the channels, and ordered soundproofing foam eggcrate tiles so we can better test our microphone.
+                        <br> -Julia Benton
+                    <li><b>12/8/2019</b></li>
+                    Software team focused on controlling the LED, since a new issue popped up with using the spotify API. We worked on fixing it, and we were able to figure out the reason why and manage to fix the problem.
 
-						<!-- Budget -->
-							<article id="budget">
-								<h2 class="major">Budget</h2>
+                    Also, we decided to use extra motor shield for the motors, so we worked on attaching extra motor shield to the arduino so that the motors do not use too much current for single motor shield (2A limit) and because there is only room for four motors per shield.
 
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Item</th>
-													<th>Quantity</th>
-													<th>Price</th>
-													<th>Tax & Shipping</th>
-													<th>Total</th>
-												</tr>
-											</thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Sparkfun Electret Microphone</td>
-                                                    <td>2</td>
-                                                    <td>0.95</td>
-                                                    <td>0.08</td>
-                                                    <td>1.98</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Foam Bead</td>
-                                                    <td>1</td>
-                                                    <td>7.99</td>
-                                                    <td>0.50</td>
-                                                    <td>8.49</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Stainless Steel Woven Wire 20 Mesh</td>
-                                                    <td>1</td>
-                                                    <td>8.99</td>
-                                                    <td>0.56</td>
-                                                    <td>9.55</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>RS-555 12V 6100RPM DC motor</td>
-                                                    <td>8</td>
-                                                    <td>4.59</td>
-                                                    <td>13.02</td>
-                                                    <td>49.74</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Clear Scratch- and UV-Resistant Cast Acrylic Sheet 24" x 48" x 3/32</td>
-                                                    <td>1</td>
-                                                    <td>25.25</td>
-                                                    <td>0.00</td>
-                                                    <td>25.25</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3D Solutech Marble 3D Printer PLA Filament 1.75MM Filament, Dimensional Accuracy +/- 0.03 mm, 2.2 LBS (1.0KG)</td>
-                                                    <td>3</td>
-                                                    <td>18.99</td>
-                                                    <td>0.00</td>
-                                                    <td>56.97</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>NeoPixel Jewel - 7 x 5050 RGB LED with Integrated Drivers</td>
-                                                    <td>7</td>
-                                                    <td>5.95</td>
-                                                    <td>0.00</td>
-                                                    <td>41.65</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>OSHPark PCB</td>
-                                                    <td>1</td>
-                                                    <td>12.55</td>
-                                                    <td>0.00</td>
-                                                    <td>12.55</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>uxcell 8Pcs 52dB Electret Microphone Inserts with PCB Pins Condenser 9x7mm</td>
-                                                    <td>1</td>
-                                                    <td>1.65</td>
-                                                    <td>0.00</td>
-                                                    <td>1.65</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>IZO All Supply (6 Pk) 2"x12"x12" Soundproofing Foam Acoustic Eggcrate Tiles Studio Foam Sound Wedges</td>
-                                                    <td>1</td>
-                                                    <td>9.50</td>
-                                                    <td>0.59</td>
-                                                    <td>10.09</td>
-                                                </tr>
+                    For Mechanical team, we focused on creating remaining parts of the structure (roof for the building) so that the mechanical part is 100% done.
+                    <span class="image fit"><img src="images/12_8_19_pic1.png" alt="" /></span>
+                    <br>
+                    Other than that, we worked on the website with general design (Font, Background image) and the content so that we can finish the website by the deadline.
+                    <br>-SeungU Lyu
+                    </li>
+                    <li>
+                        <b>12/10/2019</b><br />
+                        Today was a very eventful day as it was the day before demo day. Under a lot of pressure to make everything look presentable, we also encountered a lot of problems. The first thing we did was work on the rocket pitch slides for demo day. This was straightforward and were able to get them done. Our next step was to hook up all of the motors to the motor shields and control them with audio input. When hooking up the motors to the motor shields, we noticed that something was amiss. The green light on the top motor shield was flickering, so we unplugged it for a bit, and then plugged it back in. We thought it was alright since the green light stayed constantly on, but then we saw smoke and smelled something burning. We immediately unplugged the power supply and looked at the motor shields. One of the h-bridge chips was completely melted and fried. The smoke from this chip charred a bit of the motor shield on top. While we believe that the top motor shield did not sustain any damage, the bottom one most certainly did.
+                        <br />
+                        <span class="image fit"><img src="images/12_10_pic1.jpg" alt="" /></span>
+                        <span class="center">Top motor shield is the one that we believe is still functional. The bottom motor shield sustained damage to the h-bridge chip.</span><br>
+                        Before we even plugged in our motors, we calculated and tested to make sure that the motors did not draw too much current. They seemed fine when we tested them, but unfortunately we burned out a chip and we learned from this experience. In order to solve this problem, and make sure that we do not burn out any more motor shields, we decided to stack five motor shields on top of each with each one containing a single motor as to ensure that they would not draw too much current. This proved to be effective and we were able to control the motors effectively (although we still try and keep an eye on the motor shields just in case).<br />
+                        The next problem we encountered was with printing/sending data from the Arduino to Python to see the motor speeds change as a result of the audio input. Before we put in all five motors and only had two, this part of the code worked well. However, when we changed our setup, this code did not work as well, and one of the channels would not work properly. We deleted the line that prints the motor speeds, so we cannot see the motor speeds, but now the channels work.<br />
+                        Through the hardships, we were able to stick together as a team and persevere. We were able to get a video of our finished product and a team photo to commemorate our progress! <br />
+                        <span class="image fit"><img src="images/12_10_pic2.jpg" alt="" /></span><br />
+                        -Audrey Lee
+                    </li>
 
-                                                <tr>
-                                                    <td>*Small Electrical Components (Resistors, Capacitors, etc)</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>3.99</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>*Adafruit Motor/Stepper/Servo Shield for Arduino v2 Kit - v2.3 (5 units)</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>99.75</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>*Solid Core and Stranded Wire (20 ft)</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>16.99</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>*Glow In Dark PLA Filament 1.75MM 1kg</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>23.99</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>*Black PLA Filament 1.75MM 1kg</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>20.99</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>*Stainless Steel #4-40 1/2" Screw (100 per pack, 2 units)</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>8.40</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>*Stainless Steel #6-32 1/2" Screw (100 per pack)</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>5.41</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>*M3 Stainless Stell 6mm Screw (25 per pack)</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>2.94</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>*Stainless Steel #4-40 Hex Nuts (100 per pack, 2 units)</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>6.04</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>*Stainless Steel #6-32 Hex Nuts (100 per pack)</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>3.40</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>*Hardboard 18 x 24 Inches, 1/8 Inch Thick (2 units)</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>18.68</td>
-                                                </tr>
-                                            </tbody>
-											<tfoot>
-												<tr>
-													<td colspan="3">
-													Total including free items: 428.50 <br><br>Total excluding free items: 217.92 <br /><br /> *Indicates items that were provided by the college
-													</td>
+                </ul>
+                <a href="#Sprint1">Back To Top</a>
+            </article>
 
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-							</article>
+            <!-- Budget -->
+            <article id="budget">
+                <h2 class="major">Budget</h2>
 
-						<!-- System Overview -->
-							<article id="systems">
-								<h2 class="major">System Overview</h2>
-								<h3 class="major">Architecture</h3>
-								<p>The diagram below characterizes the pieces of our system by flow of information. Mechanical components are in blue, Electrical components in red, and Software in Green.
-                                <span class="image fit"><img src="images/Arch_Diagram.jpg" alt="" /></span>
-								<h3 class="major">Subsystems</h3>
-								<section>
-									<p>To learn more about the individual aspects of our aparatus, click on the subsytems below.</p>
-									<ul class="actions">
-										<li><a href="#electrical" class="button">Electrical</a></li>
-										<li><a href="#mechanical" class="button">Mechanical</a></li>
-										<li><a href="#software" class="button">Software</a></li>
-									</ul>
-								</section>
-							</article>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Tax & Shipping</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Sparkfun Electret Microphone</td>
+                                <td>2</td>
+                                <td>0.95</td>
+                                <td>0.08</td>
+                                <td>1.98</td>
+                            </tr>
+                            <tr>
+                                <td>Foam Bead</td>
+                                <td>1</td>
+                                <td>7.99</td>
+                                <td>0.50</td>
+                                <td>8.49</td>
+                            </tr>
+                            <tr>
+                                <td>Stainless Steel Woven Wire 20 Mesh</td>
+                                <td>1</td>
+                                <td>8.99</td>
+                                <td>0.56</td>
+                                <td>9.55</td>
+                            </tr>
+                            <tr>
+                                <td>RS-555 12V 6100RPM DC motor</td>
+                                <td>8</td>
+                                <td>4.59</td>
+                                <td>13.02</td>
+                                <td>49.74</td>
+                            </tr>
+                            <tr>
+                                <td>Clear Scratch- and UV-Resistant Cast Acrylic Sheet 24" x 48" x 3/32</td>
+                                <td>1</td>
+                                <td>25.25</td>
+                                <td>0.00</td>
+                                <td>25.25</td>
+                            </tr>
+                            <tr>
+                                <td>3D Solutech Marble 3D Printer PLA Filament 1.75MM Filament, Dimensional Accuracy +/- 0.03 mm, 2.2 LBS (1.0KG)</td>
+                                <td>3</td>
+                                <td>18.99</td>
+                                <td>0.00</td>
+                                <td>56.97</td>
+                            </tr>
+                            <tr>
+                                <td>NeoPixel Jewel - 7 x 5050 RGB LED with Integrated Drivers</td>
+                                <td>7</td>
+                                <td>5.95</td>
+                                <td>0.00</td>
+                                <td>41.65</td>
+                            </tr>
+                            <tr>
+                                <td>OSHPark PCB</td>
+                                <td>1</td>
+                                <td>12.55</td>
+                                <td>0.00</td>
+                                <td>12.55</td>
+                            </tr>
+                            <tr>
+                                <td>uxcell 8Pcs 52dB Electret Microphone Inserts with PCB Pins Condenser 9x7mm</td>
+                                <td>1</td>
+                                <td>1.65</td>
+                                <td>0.00</td>
+                                <td>1.65</td>
+                            </tr>
+                            <tr>
+                                <td>IZO All Supply (6 Pk) 2"x12"x12" Soundproofing Foam Acoustic Eggcrate Tiles Studio Foam Sound Wedges</td>
+                                <td>1</td>
+                                <td>9.50</td>
+                                <td>0.59</td>
+                                <td>10.09</td>
+                            </tr>
 
-						<!-- Electrical -->
-                            <article id="electrical">
-                                <h2 class="major">Electrical</h2>
-                                <i>A summary of the electrical system in Castle of Air</i>
-                                
-                                <p>
-                                    We developed and prototyped a system which is capable of visualizing analog sound input. We started with prototyping a sound receiver on a breadboard. We worked towards a functional PCB, that would receive sound input, filter, amplify it. This amplified signal would then be sent to be processed by the <a href="#software">Software</a> and Electrical Subsystems by applying Fourier Transform to extract the frequencies from the signal. With these extracted frequencies, we would be able to control the fan speeds to visualize the frequencies in our channels built by the <a href="#mechanical">Mechanical</a> Subsystem.
-                                    <br />
-                                    <br />
-                                    We also developed the light system that would be utilized to visualize the beat of the song. This relied on the <a href="#software">Software</a> Subsystem’s algorithm to get the rhythm of the song.
-                                </p>
-                                <h3 class="major">Design Process</h3>
-                                <p>
+                            <tr>
+                                <td>*Small Electrical Components (Resistors, Capacitors, etc)</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>3.99</td>
+                            </tr>
+                            <tr>
+                                <td>*Adafruit Motor/Stepper/Servo Shield for Arduino v2 Kit - v2.3 (5 units)</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>99.75</td>
+                            </tr>
+                            <tr>
+                                <td>*Solid Core and Stranded Wire (20 ft)</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>16.99</td>
+                            </tr>
+                            <tr>
+                                <td>*Glow In Dark PLA Filament 1.75MM 1kg</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>23.99</td>
+                            </tr>
+                            <tr>
+                                <td>*Black PLA Filament 1.75MM 1kg</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>20.99</td>
+                            </tr>
+                            <tr>
+                                <td>*Stainless Steel #4-40 1/2" Screw (100 per pack, 2 units)</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>8.40</td>
+                            </tr>
+                            <tr>
+                                <td>*Stainless Steel #6-32 1/2" Screw (100 per pack)</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>5.41</td>
+                            </tr>
+                            <tr>
+                                <td>*M3 Stainless Stell 6mm Screw (25 per pack)</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>2.94</td>
+                            </tr>
+                            <tr>
+                                <td>*Stainless Steel #4-40 Hex Nuts (100 per pack, 2 units)</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>6.04</td>
+                            </tr>
+                            <tr>
+                                <td>*Stainless Steel #6-32 Hex Nuts (100 per pack)</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>3.40</td>
+                            </tr>
+                            <tr>
+                                <td>*Hardboard 18 x 24 Inches, 1/8 Inch Thick (2 units)</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>18.68</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3">
+                                    Total including free items: 428.50 <br><br>Total excluding free items: 217.92 <br /><br /> *Indicates items that were provided by the college
+                                </td>
 
-                                    We first started off with a circuit that could just detect sound waves. It worked like it was supposed to, but it was hard to see if there were any discernible sounds caused by the team.
-                                    <br />
-                                    <span class="image fit"><img src="images/10_22_pic1.png" alt="" style="width:300px;height:300px;"  class="center"/></span>
-                                    <br />
-                                    Next, we moved on to amplifying the signal so we could see noticeable differences in pitch changes. We plugged the circuit into a breadboard that contains  the microphone and preamplifier. As an added measure, we also wanted to include a peak detector and a buffer amplifier. The schematic of the circuit can be seen in the schematic section of this page. The picture below is the breadboard circuit of the <a href="#schematic">schematic</a>.
-                                    <br />
-                                    <span class="image fit"><img src="images/11_1_pic4.jpg" alt="" /></span>
-                                    <br />
-                                    After we found that our breadboard circuit worked, we moved on to designing a PCB on KiCad. We converted the KiCad schematic to a KiCad PCB format to get Gerber files, and ordered it from OSHPark:
-                                    <br />
-                                    <span class="image fit"><img src="images/11_12_pic1.png" alt="" /></span>
-                                    <span class="image fit"><img src="images/11_12_pic2.png" alt="" /></span>
-                                    <br />
-                                    When we received our PCB two weeks later, we unfortunately found out that the op-amp we had in stock was too big for the surface-mount pads on our PCB. This was because we accidentally put an LMV324 as our op-amp instead of an OPA4353UA op-amp.
-                                    <br />
-                                    <br />
-                                    Since we could not use our PCB, we decided to make the circuit neater by using a proto board.
-                                    <br />
-                                    <span class="image fit"><img src="images/12_6_19_pic1.png" alt="" style="width:300px;height:300px;"  class="center"/></span>
-                                    <br />
-                                    We decided that we only needed the first half of the circuit since that was all that was needed for processing the signal.
-                                </p>
-                                <h3 class="major" id="schematic">Schematic</h3>
-                                <p>
-                                    <span class="image fit"><img src="images/KiCadSchematic_POE_Mic.PNG" alt="" /></span>
-                                    The Mic and Preamplifier takes the sound wave AC voltage input, and rides a DC offset of approximately one-half of the supply voltage. As we found in the design process section, we found that the microphone’s output voltage is very small, so we included an amplifier with a gain of 100 (20 dB). We made the gain adjustable by having the option to add another resistor in the R17 slot. The audio output is DC coupled and can be directly connected to an analog input of a microcontroller. In perfectly quiet conditions, it will ideally output one-half the supplied voltage units (or around 512 on an Arduino).
-                                    <br />
-                                    <span class="image fit"><img src="images/KiCadSchematic_POE_Peak_and_Buffer.PNG" alt="" /></span>
-                                    The Peak Detector and Buffer Amplifier gets the peaks of the sound wave and amplifies that. The op-amp inverts and amplifies the signal so when its output swings high, D2 turns on, and charges C1. When the op-amp is high or not swinging, D2 is turned off, and C1 discharges through R9. This means that C1 tracks the peaks of the input signal.
-                                    <br />
-                                    <br />
-                                    <a href="https://www.sparkfun.com/products/12642?_ga=2.174734502.507152312.1576205106-1314825090.1571346034">Referenced Sparkfun Sound Detector</a>
-                                </p>
-                                <h3 class="major" id="future">Future Iterations</h3>
-                                <p>
-                                    If we continued this project, we would like to get the PCB working with getting the correct Op-Amp part. We would also like to experiment more with sound processing and how we could filter and amplify the signal better.
-                                </p>
-                                <h3 class="major">Other Subsystems</h3>
-                                <section>
-                                    <ul class="actions">
-                                        <li><a href="#mechanical" class="button">Mechanical</a></li>
-                                        <li><a href="#software" class="button">Software</a></li>
-                                    </ul>
-                                </section>
-                            </article>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </article>
 
-						<!-- Mechanical -->
-							<article id="mechanical">
-								<h2 class="major">Mechanical</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p>Mechanical</p>
-								<h3 class="major">Other Subsystems</h3>
-								<section>
-									<p></p>
-									<ul class="actions">
-										<li><a href="#electrical" class="button">Electrical</a></li>
-										<li><a href="#software" class="button">Software</a></li>
-									</ul>
-								</section>
-								</article>
+            <!-- System Overview -->
+            <article id="systems">
+                <h2 class="major">System Overview</h2>
+                <h3 class="major">Architecture</h3>
+                <p>
+                    The diagram below characterizes the pieces of our system by flow of information. Mechanical components are in blue, Electrical components in red, and Software in Green.
+                    <span class="image fit"><img src="images/Arch_Diagram.jpg" alt="" /></span>
+                    <h3 class="major">Subsystems</h3>
+                    <section>
+                <p>To learn more about the individual aspects of our aparatus, click on the subsytems below.</p>
+                <ul class="actions">
+                    <li><a href="#electrical" class="button">Electrical</a></li>
+                    <li><a href="#mechanical" class="button">Mechanical</a></li>
+                    <li><a href="#software" class="button">Software</a></li>
+                </ul>
+                </section>
+            </article>
 
-						<!-- Software -->
-							<article id="software">
-								<h2 class="major">Software</h2>
+            <!-- Electrical -->
+            <article id="electrical">
+                <h2 class="major">Electrical</h2>
+                <i>A summary of the electrical system in Castle of Air</i>
 
-								<p>Links to the subsections:</p>
-								<a href="#motor">Motor Control</a><br>
-								<a href="#led">LED Control</a><br><br>
+                <p>
+                    We developed and prototyped a system which is capable of visualizing analog sound input. We started with prototyping a sound receiver on a breadboard. We worked towards a functional PCB, that would receive sound input, filter, amplify it. This amplified signal would then be sent to be processed by the <a href="#software">Software</a> and Electrical Subsystems by applying Fourier Transform to extract the frequencies from the signal. With these extracted frequencies, we would be able to control the fan speeds to visualize the frequencies in our channels built by the <a href="#mechanical">Mechanical</a> Subsystem.
+                    <br />
+                    <br />
+                    We also developed the light system that would be utilized to visualize the beat of the song. This relied on the <a href="#software">Software</a> Subsystem’s algorithm to get the rhythm of the song.
+                </p>
+                <h3 class="major">Design Process</h3>
+                <p>
 
-								<h3 class="major" id="motor">Motor Control</h3>
-								<p> The software system for controlling the motors beneath each of the five towers was dependent on the analog audio input from a microphone.
-									The output from the microphone was a single frequency that was a combination of all the existing frequencies of a given sound input.
-									To break down the output into different frequencies and their respective amplitudes, fast fourier transform (FFT) was applied to the output.
-									Then we extracted the frequencies with the highest amplitudes and used the amplitudes to control the speed of the motors.
-								</p>
-								<span class="image main"><img src="images/motor_control_flow.png" alt="" /></span>
+                    We first started off with a circuit that could just detect sound waves. It worked like it was supposed to, but it was hard to see if there were any discernible sounds caused by the team.
+                    <br />
+                    <span class="image fit"><img src="images/10_22_pic1.png" alt="" style="width:300px;height:300px;" class="center" /></span>
+                    <br />
+                    Next, we moved on to amplifying the signal so we could see noticeable differences in pitch changes. We plugged the circuit into a breadboard that contains  the microphone and preamplifier. As an added measure, we also wanted to include a peak detector and a buffer amplifier. The schematic of the circuit can be seen in the schematic section of this page. The picture below is the breadboard circuit of the <a href="#schematic">schematic</a>.
+                    <br />
+                    <span class="image fit"><img src="images/11_1_pic4.jpg" alt="" /></span>
+                    <br />
+                    After we found that our breadboard circuit worked, we moved on to designing a PCB on KiCad. We converted the KiCad schematic to a KiCad PCB format to get Gerber files, and ordered it from OSHPark:
+                    <br />
+                    <span class="image fit"><img src="images/11_12_pic1.png" alt="" /></span>
+                    <span class="image fit"><img src="images/11_12_pic2.png" alt="" /></span>
+                    <br />
+                    When we received our PCB two weeks later, we unfortunately found out that the op-amp we had in stock was too big for the surface-mount pads on our PCB. This was because we accidentally put an LMV324 as our op-amp instead of an OPA4353UA op-amp.
+                    <br />
+                    <br />
+                    Since we could not use our PCB, we decided to make the circuit neater by using a proto board.
+                    <br />
+                    <span class="image fit"><img src="images/12_6_19_pic1.png" alt="" style="width:300px;height:300px;" class="center" /></span>
+                    <br />
+                    We decided that we only needed the first half of the circuit since that was all that was needed for processing the signal.
+                </p>
+                <h3 class="major" id="schematic">Schematic</h3>
+                <p>
+                    <span class="image fit"><img src="images/KiCadSchematic_POE_Mic.PNG" alt="" /></span>
+                    The Mic and Preamplifier takes the sound wave AC voltage input, and rides a DC offset of approximately one-half of the supply voltage. As we found in the design process section, we found that the microphone’s output voltage is very small, so we included an amplifier with a gain of 100 (20 dB). We made the gain adjustable by having the option to add another resistor in the R17 slot. The audio output is DC coupled and can be directly connected to an analog input of a microcontroller. In perfectly quiet conditions, it will ideally output one-half the supplied voltage units (or around 512 on an Arduino).
+                    <br />
+                    <span class="image fit"><img src="images/KiCadSchematic_POE_Peak_and_Buffer.PNG" alt="" /></span>
+                    The Peak Detector and Buffer Amplifier gets the peaks of the sound wave and amplifies that. The op-amp inverts and amplifies the signal so when its output swings high, D2 turns on, and charges C1. When the op-amp is high or not swinging, D2 is turned off, and C1 discharges through R9. This means that C1 tracks the peaks of the input signal.
+                    <br />
+                    <br />
+                    <a href="https://www.sparkfun.com/products/12642?_ga=2.174734502.507152312.1576205106-1314825090.1571346034">Referenced Sparkfun Sound Detector</a>
+                </p>
+                <h3 class="major" id="future">Future Iterations</h3>
+                <p>
+                    If we continued this project, we would like to get the PCB working with getting the correct Op-Amp part. We would also like to experiment more with sound processing and how we could filter and amplify the signal better.
+                </p>
+                <h3 class="major">Other Subsystems</h3>
+                <section>
+                    <ul class="actions">
+                        <li><a href="#mechanical" class="button">Mechanical</a></li>
+                        <li><a href="#software" class="button">Software</a></li>
+                    </ul>
+                </section>
+            </article>
 
-								<h3 class="h3.subsection">Serial Communication Between Arduino and Python Script</h3>
-								<p>
-									The software subteam first started by sending and receiving data between the Arduino and the Python script through serial communication.
-									We decided to send data from the Arduino and then process the data in the Python script rather than sending and processing the data all in the Arduino.
-									This decision was made based on the difficulty of data wrangling and processing in C++. 
-								</p>
+            <!-- Mechanical -->
+            <article id="mechanical">
+                <h2 class="major">Mechanical</h2>
+                <span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+                <p>Mechanical</p>
+                <h3 class="major">Other Subsystems</h3>
+                <section>
+                    <p></p>
+                    <ul class="actions">
+                        <li><a href="#electrical" class="button">Electrical</a></li>
+                        <li><a href="#software" class="button">Software</a></li>
+                    </ul>
+                </section>
+            </article>
 
-								<h3 class="h3.subsection">Selection of the Highest Amplitudes</h3>
-								<p>
-									Once the data from each timestamp was delivered to the Python script, we processed the data so that the five highest amplitudes would be selected from 
-									each timestamp, and those amplitudes would be sent back to the Arduino for controlling the motor speeds.
-									The amplitudes were scaled up to show more visible changes in the motor speeds. <br>
-									One of the challenges we had to deal in this process was involved dealing with empty data.
-									When empty data was detected, we moved onto reading the next line of the data to prevent errors. 
-								</p>
+            <!-- Software -->
+            <article id="software">
+                <h2 class="major">Software</h2>
 
-                                <h3 class="h3.subsection">
-                                    Controlling the Motors with Multiple Motor Shields</h3>
-                                    <p>
-                                        After the Arduino receives the five highest amplitudes, the amplitudes are used to control the motors.
-                                        We used five different motorshields respective to each motor to prevent possible burning of the motor shields.
-                                        A big difficulty we faced when visualizing music from the microphone was struggling to synch the height of the foam balls with the audio input.
-                                        It was very difficult to detect sounds resulting from clapping, singing, whistling, etc. due to the noise in the background, which included the sound of the running motors.
-                                        As a fix to this, we made a soundproof box and placed the microphone within it along with speakers.
-									</p>
-									<span class="image main"><img src="images/soundproof1.jpg" alt="" /></span>
-									<span class="image main"><img src="images/soundproof3.jpg" alt="" /></span>
-									<span class="image main"><img src="images/soundproof2.jpg" alt="" /></span>
+                <p>Links to the subsections:</p>
+                <a href="#motor">Motor Control</a><br>
+                <a href="#led">LED Control</a><br><br>
 
-                                    <h3 class="major" id="led">LED Control</h3>
-                                    <p>
-                                        The lighting team designed a system that mimics the beat of the music currently playing through Spotify by accessing Spotify’s API in python and sending the relevant information to Arduino in order to manipulate the lighting output of our five Adafruit NeoPixels.
-                                        <br />
-                                        <br />
-                                        The lighting team also worked to automate the change of songs so that the software could run continuously instead of having to be rerun on song change and would automatically start analyzing the currently playing song when the code is first run.
-                                        <br />
-                                        <br />
-                                        <pre><code>if token:
+                <h3 class="major" id="motor">Motor Control</h3>
+                <p>
+                    The software system for controlling the motors beneath each of the five towers was dependent on the analog audio input from a microphone.
+                    The output from the microphone was a single frequency that was a combination of all the existing frequencies of a given sound input.
+                    To break down the output into different frequencies and their respective amplitudes, fast fourier transform (FFT) was applied to the output.
+                    Then we extracted the frequencies with the highest amplitudes and used the amplitudes to control the speed of the motors.
+                </p>
+                <span class="image main"><img src="images/motor_control_flow.png" alt="" /></span>
+
+                <h3 class="h3.subsection">Serial Communication Between Arduino and Python Script</h3>
+                <p>
+                    The software subteam first started by sending and receiving data between the Arduino and the Python script through serial communication.
+                    We decided to send data from the Arduino and then process the data in the Python script rather than sending and processing the data all in the Arduino.
+                    This decision was made based on the difficulty of data wrangling and processing in C++.
+                </p>
+
+                <h3 class="h3.subsection">Selection of the Highest Amplitudes</h3>
+                <p>
+                    Once the data from each timestamp was delivered to the Python script, we processed the data so that the five highest amplitudes would be selected from
+                    each timestamp, and those amplitudes would be sent back to the Arduino for controlling the motor speeds.
+                    The amplitudes were scaled up to show more visible changes in the motor speeds. <br>
+                    One of the challenges we had to deal in this process was involved dealing with empty data.
+                    When empty data was detected, we moved onto reading the next line of the data to prevent errors.
+                </p>
+
+                <h3 class="h3.subsection">
+                    Controlling the Motors with Multiple Motor Shields
+                </h3>
+                <p>
+                    After the Arduino receives the five highest amplitudes, the amplitudes are used to control the motors.
+                    We used five different motorshields respective to each motor to prevent possible burning of the motor shields.
+                    A big difficulty we faced when visualizing music from the microphone was struggling to synch the height of the foam balls with the audio input.
+                    It was very difficult to detect sounds resulting from clapping, singing, whistling, etc. due to the noise in the background, which included the sound of the running motors.
+                    As a fix to this, we made a soundproof box and placed the microphone within it along with speakers.
+                </p>
+                <span class="image main"><img src="images/soundproof1.jpg" alt="" /></span>
+                <span class="image main"><img src="images/soundproof3.jpg" alt="" /></span>
+                <span class="image main"><img src="images/soundproof2.jpg" alt="" /></span>
+
+                <h3 class="major" id="led">LED Control</h3>
+                <p>
+                    The lighting team designed a system that mimics the beat of the music currently playing through Spotify by accessing Spotify’s API in python and sending the relevant information to Arduino in order to manipulate the lighting output of our five Adafruit NeoPixels.
+                    <br />
+                    <br />
+                    The lighting team also worked to automate the change of songs so that the software could run continuously instead of having to be rerun on song change and would automatically start analyzing the currently playing song when the code is first run.
+                    <br />
+                    <br />
+                    <pre><code>if token:
     sp = spotipy.Spotify(auth=token)
     results = sp.audio_analysis(current_track_uri)
     print(results['beats'])
     print(results)
     tempo = int(round(results['track']['tempo'],0))
 </code></pre>
-                                       
-                                    </p>
-                                    <h3 class="h3.subsection">Design Process</h3>
-                                    <p>
-                                        The design process started off by figuring out how the Spotify API scraping library worked. This meant learning how to change the scope of the scraping process, how to enter my Spotify Premium credentials to set up the scraping process, and how the results of the scrape were formatted.
-                                        <br />
-                                        <pre><code># export SPOTIPY_CLIENT_ID='***************************************'
+
+                </p>
+                <h3 class="h3.subsection">Design Process</h3>
+                <p>
+                    The design process started off by figuring out how the Spotify API scraping library worked. This meant learning how to change the scope of the scraping process, how to enter my Spotify Premium credentials to set up the scraping process, and how the results of the scrape were formatted.
+                    <br />
+                    <pre><code># export SPOTIPY_CLIENT_ID='***************************************'
 # export SPOTIPY_CLIENT_SECRET='*********************************'
 # export SPOTIPY_REDIRECT_URI='http://localhost/callback/'
 
@@ -695,11 +715,11 @@ scope = 'user-library-read user-read-currently-playing user-modify-playback-stat
 username = 'thranxar'
 
 </code></pre>
-                                        <br />
-                                        The next dilemma to deal with was live processing. At first, we began trying a scaled up version of our visualization by taking every discrete beat in the song triggering a message send to arduino at the exact start and end of the beat. Sadly, we quickly determine that with the limited skillset with complicated data structures and data traversal at my disposal, attempting to make a process of this sort live was too much work for too little reward, so we pivoted.
-                                        <br />
-                                        <br />
-                                        <pre><code>try:
+                    <br />
+                    The next dilemma to deal with was live processing. At first, we began trying a scaled up version of our visualization by taking every discrete beat in the song triggering a message send to arduino at the exact start and end of the beat. Sadly, we quickly determine that with the limited skillset with complicated data structures and data traversal at my disposal, attempting to make a process of this sort live was too much work for too little reward, so we pivoted.
+                    <br />
+                    <br />
+                    <pre><code>try:
     beatEnd = noteDic[round(round(time.time(),1)-t,1)]
     arduino.write(str(round(beatEnd-round(time.time()-t,1),1)).encode())
     arduino.write('1'.encode())
@@ -711,50 +731,52 @@ username = 'thranxar'
     except KeyError:
         arduino.write('2'.encode())
 </code></pre>
-                                        <br />
-                                        After this realization, we did less persistent python to arduino communication, and of tempo rather than of every beat. Once this information was properly communicated, our final important step was to take those numbers and turn them into a lightshow through arduino’s neopixel library. There was a large learning curve in the neopixel setup process, but once this was implemented we had our final lighting product.
-                                        <br />
-                                        <span class="image fit"><img src="images/background_structure.png" alt="" /></span>
-                                    </p>
-                                    <h3 class="h3.subsection">Future Iterations</h3>
-                                    <p>
-                                        The most prominent thing I would want to improve upon in the lighting software is making the processing more adaptive based on changes in the music. Since Spotify doesn’t fully provide each change in tempo in every song, sometimes the lighting is trapped in the wrong tempo which ruins the viewing experience. A good way of dealing with this would be to sense the tempo actively by checking for the change in time between prominent beats from the Spotify scrape.
+                    <br />
+                    After this realization, we did less persistent python to arduino communication, and of tempo rather than of every beat. Once this information was properly communicated, our final important step was to take those numbers and turn them into a lightshow through arduino’s neopixel library. There was a large learning curve in the neopixel setup process, but once this was implemented we had our final lighting product.
+                    <br />
+                    <span class="image fit"><img src="images/background_structure.png" alt="" /></span>
+                </p>
+                <h3 class="h3.subsection">Future Iterations</h3>
+                <p>
+                    The most prominent thing I would want to improve upon in the lighting software is making the processing more adaptive based on changes in the music. Since Spotify doesn’t fully provide each change in tempo in every song, sometimes the lighting is trapped in the wrong tempo which ruins the viewing experience. A good way of dealing with this would be to sense the tempo actively by checking for the change in time between prominent beats from the Spotify scrape.
 
-                                    </p>
-                                
-                                    <h3 class="h3.subsection">
-                                        Source Code (Click on the Github icon): <a href="https://github.com/CaseyJMay/PoeProjectCode" class="icon brands fa-github" class="center"><span class="label"></span></a></h4>
-                                        <h3 class="major">Other Subsytems</h3>
-                                        <section>
-                                            <p></p>
-                                            <ul class="actions">
-                                                <li><a href="#electrical" class="button">Electrical</a></li>
-                                                <li><a href="#mechanical" class="button">Mechanical</a></li>
-                                            </ul>
-                                        </section>
-</article>
+                </p>
+
+                <h3 class="h3.subsection">
+                    Source Code (Click on the Github icon): <a href="https://github.com/CaseyJMay/PoeProjectCode" class="icon brands fa-github" class="center"><span class="label"></span></a></h4>
+                    <h3 class="major">Other Subsytems</h3>
+                    <section>
+                        <p></p>
+                        <ul class="actions">
+                            <li><a href="#electrical" class="button">Electrical</a></li>
+                            <li><a href="#mechanical" class="button">Mechanical</a></li>
+                        </ul>
+                    </section>
+            </article>
 
 
-						<!-- Elements -->
-							<article id="elements">
-								<h2 class="major">Elements</h2>
+            <!-- Elements -->
+            <article id="elements">
+                <h2 class="major">Elements</h2>
 
-								<section>
-									<h3 class="major">Text</h3>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h4>Blockquote</h4>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h4>Preformatted</h4>
-									<pre><code>i = 0;
+                <section>
+                    <h3 class="major">Text</h3>
+                    <p>
+                        This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+                        This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+                        This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.
+                    </p>
+                    <hr />
+                    <h2>Heading Level 2</h2>
+                    <h3>Heading Level 3</h3>
+                    <h4>Heading Level 4</h4>
+                    <h5>Heading Level 5</h5>
+                    <h6>Heading Level 6</h6>
+                    <hr />
+                    <h4>Blockquote</h4>
+                    <blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+                    <h4>Preformatted</h4>
+                    <pre><code>i = 0;
 
 while (!deck.isInOrder()) {
     print 'Iteration ' + i;
@@ -763,238 +785,238 @@ while (!deck.isInOrder()) {
 }
 
 print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
+                </section>
 
-								<section>
-									<h3 class="major">Lists</h3>
+                <section>
+                    <h3 class="major">Lists</h3>
 
-									<h4>Unordered</h4>
-									<ul>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+                    <h4>Unordered</h4>
+                    <ul>
+                        <li>Dolor pulvinar etiam.</li>
+                        <li>Sagittis adipiscing.</li>
+                        <li>Felis enim feugiat.</li>
+                    </ul>
 
-									<h4>Alternate</h4>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+                    <h4>Alternate</h4>
+                    <ul class="alt">
+                        <li>Dolor pulvinar etiam.</li>
+                        <li>Sagittis adipiscing.</li>
+                        <li>Felis enim feugiat.</li>
+                    </ul>
 
-									<h4>Ordered</h4>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
-									<h4>Icons</h4>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-									</ul>
+                    <h4>Ordered</h4>
+                    <ol>
+                        <li>Dolor pulvinar etiam.</li>
+                        <li>Etiam vel felis viverra.</li>
+                        <li>Felis enim feugiat.</li>
+                        <li>Dolor pulvinar etiam.</li>
+                        <li>Etiam vel felis lorem.</li>
+                        <li>Felis enim et feugiat.</li>
+                    </ol>
+                    <h4>Icons</h4>
+                    <ul class="icons">
+                        <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                        <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                        <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                    </ul>
 
-									<h4>Actions</h4>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</section>
+                    <h4>Actions</h4>
+                    <ul class="actions">
+                        <li><a href="#" class="button primary">Default</a></li>
+                        <li><a href="#" class="button">Default</a></li>
+                    </ul>
+                    <ul class="actions stacked">
+                        <li><a href="#" class="button primary">Default</a></li>
+                        <li><a href="#" class="button">Default</a></li>
+                    </ul>
+                </section>
 
-								<section>
-									<h3 class="major">Table</h3>
-									<h4>Default</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
+                <section>
+                    <h3 class="major">Table</h3>
+                    <h4>Default</h4>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Item One</td>
+                                    <td>Ante turpis integer aliquet porttitor.</td>
+                                    <td>29.99</td>
+                                </tr>
+                                <tr>
+                                    <td>Item Two</td>
+                                    <td>Vis ac commodo adipiscing arcu aliquet.</td>
+                                    <td>19.99</td>
+                                </tr>
+                                <tr>
+                                    <td>Item Three</td>
+                                    <td> Morbi faucibus arcu accumsan lorem.</td>
+                                    <td>29.99</td>
+                                </tr>
+                                <tr>
+                                    <td>Item Four</td>
+                                    <td>Vitae integer tempus condimentum.</td>
+                                    <td>19.99</td>
+                                </tr>
+                                <tr>
+                                    <td>Item Five</td>
+                                    <td>Ante turpis integer aliquet porttitor.</td>
+                                    <td>29.99</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="2"></td>
+                                    <td>100.00</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
 
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
+                    <h4>Alternate</h4>
+                    <div class="table-wrapper">
+                        <table class="alt">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Item One</td>
+                                    <td>Ante turpis integer aliquet porttitor.</td>
+                                    <td>29.99</td>
+                                </tr>
+                                <tr>
+                                    <td>Item Two</td>
+                                    <td>Vis ac commodo adipiscing arcu aliquet.</td>
+                                    <td>19.99</td>
+                                </tr>
+                                <tr>
+                                    <td>Item Three</td>
+                                    <td> Morbi faucibus arcu accumsan lorem.</td>
+                                    <td>29.99</td>
+                                </tr>
+                                <tr>
+                                    <td>Item Four</td>
+                                    <td>Vitae integer tempus condimentum.</td>
+                                    <td>19.99</td>
+                                </tr>
+                                <tr>
+                                    <td>Item Five</td>
+                                    <td>Ante turpis integer aliquet porttitor.</td>
+                                    <td>29.99</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="2"></td>
+                                    <td>100.00</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </section>
 
-								<section>
-									<h3 class="major">Buttons</h3>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Primary</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button primary disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
+                <section>
+                    <h3 class="major">Buttons</h3>
+                    <ul class="actions">
+                        <li><a href="#" class="button primary">Primary</a></li>
+                        <li><a href="#" class="button">Default</a></li>
+                    </ul>
+                    <ul class="actions">
+                        <li><a href="#" class="button">Default</a></li>
+                        <li><a href="#" class="button small">Small</a></li>
+                    </ul>
+                    <ul class="actions">
+                        <li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+                        <li><a href="#" class="button icon solid fa-download">Icon</a></li>
+                    </ul>
+                    <ul class="actions">
+                        <li><span class="button primary disabled">Disabled</span></li>
+                        <li><span class="button disabled">Disabled</span></li>
+                    </ul>
+                </section>
 
-								<section>
-									<h3 class="major">Form</h3>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="demo-name">Name</label>
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-											</div>
-											<div class="field half">
-												<label for="demo-email">Email</label>
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-											</div>
-											<div class="field">
-												<label for="demo-category">Category</label>
-												<select name="demo-category" id="demo-category">
-													<option value="">-</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-												<label for="demo-priority-low">Low</label>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-high" name="demo-priority">
-												<label for="demo-priority-high">High</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-copy" name="demo-copy">
-												<label for="demo-copy">Email me a copy</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-human" name="demo-human" checked>
-												<label for="demo-human">Not a robot</label>
-											</div>
-											<div class="field">
-												<label for="demo-message">Message</label>
-												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</section>
+                <section>
+                    <h3 class="major">Form</h3>
+                    <form method="post" action="#">
+                        <div class="fields">
+                            <div class="field half">
+                                <label for="demo-name">Name</label>
+                                <input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
+                            </div>
+                            <div class="field half">
+                                <label for="demo-email">Email</label>
+                                <input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
+                            </div>
+                            <div class="field">
+                                <label for="demo-category">Category</label>
+                                <select name="demo-category" id="demo-category">
+                                    <option value="">-</option>
+                                    <option value="1">Manufacturing</option>
+                                    <option value="1">Shipping</option>
+                                    <option value="1">Administration</option>
+                                    <option value="1">Human Resources</option>
+                                </select>
+                            </div>
+                            <div class="field half">
+                                <input type="radio" id="demo-priority-low" name="demo-priority" checked>
+                                <label for="demo-priority-low">Low</label>
+                            </div>
+                            <div class="field half">
+                                <input type="radio" id="demo-priority-high" name="demo-priority">
+                                <label for="demo-priority-high">High</label>
+                            </div>
+                            <div class="field half">
+                                <input type="checkbox" id="demo-copy" name="demo-copy">
+                                <label for="demo-copy">Email me a copy</label>
+                            </div>
+                            <div class="field half">
+                                <input type="checkbox" id="demo-human" name="demo-human" checked>
+                                <label for="demo-human">Not a robot</label>
+                            </div>
+                            <div class="field">
+                                <label for="demo-message">Message</label>
+                                <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+                            </div>
+                        </div>
+                        <ul class="actions">
+                            <li><input type="submit" value="Send Message" class="primary" /></li>
+                            <li><input type="reset" value="Reset" /></li>
+                        </ul>
+                    </form>
+                </section>
 
-							</article>
+            </article>
 
-					</div>
+        </div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy;CastleOfAir Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright">&copy;CastleOfAir Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+        </footer>
 
-			</div>
+    </div>
 
-		<!-- BG -->
-			<div id="bg"></div>
+    <!-- BG -->
+    <div id="bg"></div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 
-	</body>
+</body>
 </html>
