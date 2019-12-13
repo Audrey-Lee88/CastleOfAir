@@ -43,10 +43,10 @@ body {
   background-color: white;
 }
 
-img:hover {
-    -webkit-transform:scale(20.0); /* or some other value */
+/*img:hover {
+    -webkit-transform:scale(20.0); 
     transform:scale(20.0);
-}
+}*/
 
 .caption {
   position: absolute;
