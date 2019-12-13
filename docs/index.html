@@ -565,8 +565,13 @@
                                 <h3 class="major" id="schematic">Schematic</h3>
                                 <p>
                                     <span class="image fit"><img src="images/KiCadSchematic_POE_Mic.PNG" alt="" /></span>
-                                    
+                                    The Mic and Preamplifier takes the sound wave AC voltage input, and rides a DC offset of approximately one-half of the supply voltage. As we found in the design process section, we found that the microphone’s output voltage is very small, so we included an amplifier with a gain of 100 (20 dB). We made the gain adjustable by having the option to add another resistor in the R17 slot. The audio output is DC coupled and can be directly connected to an analog input of a microcontroller. In perfectly quiet conditions, it will ideally output one-half the supplied voltage units (or around 512 on an Arduino).
+                                    <br />
                                     <span class="image fit"><img src="images/KiCadSchematic_POE_Peak_and_Buffer.PNG" alt="" /></span>
+                                    The Peak Detector and Buffer Amplifier gets the peaks of the sound wave and amplifies that. The op-amp inverts and amplifies the signal so when its output swings high, D2 turns on, and charges C1. When the op-amp is high or not swinging, D2 is turned off, and C1 discharges through R9. This means that C1 tracks the peaks of the input signal.
+                                    <br />
+                                    <br />
+                                    <a href="https://www.sparkfun.com/products/12642?_ga=2.174734502.507152312.1576205106-1314825090.1571346034">Referenced Sparkfun Sound Detector</a>
                                 </p>
                                 <h3 class="major" id="future">Future Iterations</h3>
                                 <p>
